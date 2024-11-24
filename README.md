@@ -7,7 +7,7 @@ This project displays decks of study cards. Each card has a question on the fron
 
 ## Built with:
   * React.js
-      * React Bootstrap
+  * React Bootstrap
   * CSS3
   * HTML5
   * Jest used for testing
