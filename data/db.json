@@ -1,0 +1,123 @@
+{
+  "decks": [
+    {
+      "id": 1,
+      "name": "Rendering in React",
+      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation."
+    },
+    {
+      "name": "React Router",
+      "description": "React Router is a collection of navigational components that compose declaratively with your application.",
+      "id": 2
+    },
+    {
+      "name": "A new deck",
+      "description": "A new deck.",
+      "id": 13
+    },
+    {
+      "name": "Interviewing soft skills project",
+      "description": "Answers to soft skills mock interview questions.",
+      "id": 14
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "front": "Differentiate between Real DOM and Virtual DOM.",
+      "back": "Virtual DOM updates are faster but do not directly update the HTML.",
+      "deckId": 1
+    },
+    {
+      "id": 2,
+      "front": "How do you modify the state of a different React component?",
+      "back": "Not at all! State is visible to the component only.",
+      "deckId": 1
+    },
+    {
+      "id": 3,
+      "front": "How do you pass data 'down' to a React child component?",
+      "back": "As properties or props",
+      "deckId": 1
+    },
+    {
+      "front": "What path will match the follow Route?\n<Route>\n  <NotFound />\n</Route>",
+      "back": "All paths. A route with no path matches all URL's",
+      "deckId": 2,
+      "id": 4
+    },
+    {
+      "front": "What does <Switch> do?",
+      "back": "Renders the first matching child <Route> ",
+      "deckId": 2,
+      "id": 5
+    },
+    {
+      "cards": [],
+      "front": "b",
+      "back": "b",
+      "deckId": 1,
+      "id": 7
+    },
+    {
+      "id": 9,
+      "front": "Did I just edit this card?",
+      "back": "Yes.",
+      "deckId": 1
+    },
+    {
+      "front": "8yoy9u.p9u",
+      "back": "p//jop/",
+      "deckId": 2,
+      "id": 11
+    },
+    {
+      "id": 12,
+      "front": "p/i/i/i",
+      "back": "P",
+      "deckId": 2
+    },
+    {
+      "id": 17,
+      "front": "What did the egg say to the frying pan?",
+      "back": "You crack me up!",
+      "deckId": 1
+    },
+    {
+      "id": 18,
+      "front": "Tell me about yourself.",
+      "back": "My journey into coding started over 5 years ago when I first moved to Las Vegas. Before this move, I had done nothing with my life but was encouraged to find a job since the work ethic in Las Vegas is strong. I had minimal expectations before coding and didn't think it would consume my life. I started coding on the free website Khanacademy.com and have been coding ever since. After finishing all the courses on Khanacademy.com, I moved on to codecademy.com but soon switched to theodinproject.com because I felt that codecademy.com was teaching me coding without any reasons or explanations. The Odin Project was recommended to me by a software developer I met at a local coding meetup and it's where I learned most of my programming skills before Chegg Skill's boot camp. I learned a lot on theodinproject.com but felt the instructions were too vague. The styling of the projects was the biggest problem. At the time, the website didn't cover CSS in depth, and there weren't any examples to base my projects. This led me to enroll in a month-long beginner's coding class at UNLV. I was only 1 of 2 people to get a 100% score for the entire course. But the coding camp required a late schedule, which didn't work out for me. I soon found Chegg Skill's program using a Google search and saw that this program used a self-taught and work-on-your-own-time schedule which perfectly suited my needs. While I already knew about 50% of the curriculum in Chegg Skill's program, I learned a lot of new coding skills like backend programming, manipulating databases, and using algorithms, which was exciting because it was new to me. All my weaknesses are strengths in this field, mainly my obsession and drive. That’s what’s gotten me this far and will continue to further my coding career. I’m currently qualified to handle the tasks of a full-stack junior web developer.",
+      "deckId": 14
+    },
+    {
+      "id": 19,
+      "front": "How many years of experience do you have?",
+      "back": "I'd say about 4 years of basic coding (JavaScript, CSS, and HTML) not counting Chegg Skill's boot camp program. 99% of my coding skills were self-taught and I'm eager and thrilled to learn everything I don't know about coding, from new languages to new algorithms, different approaches to solving problems, etc.",
+      "deckId": 14
+    },
+    {
+      "id": 20,
+      "front": "Tell me about a recent project that you're proud of",
+      "back": "The \"We love movies\" project (which was built mainly using Express and Knex while following REST principles), lists all the movies in the database depending on whether the movie is showing or not, displays specific movies, displays all the theaters where a specified movie is playing, shows all the reviews for a specified movie, allows reviews to be updated or deleted, and returns all the theaters with all the movies showing at a specific theater. I'm proud of this project because I completed the project in under half of the program's expected time. My coding mentor said it would take over 40 hours to complete, but I finished the project in under 19 hours (not counting the time I spent researching what packages to install and update because the project's files were out-of-date). The project also required me to use a complex function that I had to code around to return the right theater information in the \"theaters\" folder. ",
+      "deckId": 14
+    },
+    {
+      "id": 21,
+      "front": "What are your weaknesses?",
+      "back": "Up until recently, it was asking for help. Since I've taught myself most of my coding skills, I felt pride in figuring out problems myself. Everything was easy and made sense until the Data and Algorithms module. But then none of the lessons made sense. So, I attended as many live Q and A sessions as Chegg Skill's had to offer (sometimes getting up at 4:45 A.M.) and scheduled many live tutoring sessions to help understand the curriculum and how to solve the problems.  I realized there's no shame in asking for help, you can learn quicker, meet deadlines, and see problems through another coder's mind. When you teach yourself, you only have your interpretation of problems and solutions. But when you work and learn from others, you may learn a different and better way of solving problems.",
+      "deckId": 14
+    },
+    {
+      "id": 22,
+      "front": "Tell me about a time that you identified a problem at work. How did you solve it?",
+      "back": "Unofficially, I thought I had a problem with the \"Local Library\" project, which uses a database to display the information from a local neighborhood library. I was coding using VSC instead of in the boot camp's browser and thought I had to filter and sort through 2 large databases instead of 1 database and 1 object. I used nested for loops to return the total amount of books borrowed from 1 person and return 10 accounts based on the \"borrows\" key in the \"books\" array. Essentially, I solved a non-existent problem while going above and beyond by writing code that handles two huge databases while still returning the right answer.\n\nOfficially, the last 2 projects I finished had outdated files that wouldn't run like the instructions said. So, I spent hours researching online until I found the packages needed to run the program on my local host and run on render.com.",
+      "deckId": 14
+    },
+    {
+      "id": 23,
+      "front": "What are your salary requirements?",
+      "back": "According to Glassdoor.com, the estimated total pay for a Junior Web Developer is $67,361 per year in the Las Vegas area, with an average salary of $62,609 per year, with the base pay being $49K - $80K a year.  But I'm open to any compensation that's externally competitive and internally fair.",
+      "deckId": 14
+    }
+  ]
+}
