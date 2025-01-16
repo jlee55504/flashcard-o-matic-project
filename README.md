@@ -3,9 +3,9 @@
 An application that allows users to create, add, edit, and delete decks and cards in the decks used for studying.
 
 ## Features
- - **Decks of cards management:** Create, update, and delete card decks.
- - **Card management:** Create, edit, and delete the cards in the decks.
- - **Study ability:** Memorize the answers to the questions on the cards to prepare for tests.
+ - **Decks of Cards Management:** Create, update, and delete card decks.
+ - **Card Management:** Create, edit, and delete the cards in the decks.
+ - **Study Ability:** Memorize the answers to the questions on the cards to prepare for tests.
  - **User-friendly Interface:** Simple structured layout for easy navigation.
 
 ## Technologies Used
@@ -25,7 +25,7 @@ An application that allows users to create, add, edit, and delete decks and card
  ### Installation:
   1. Clone the repository:
      ```
-     https://github.com/jlee55504/flashcard-o-matic-render-version.git
+     git clone https://github.com/jlee55504/flashcard-o-matic-render-version.git
      ```
   3. Navigate to the project directory:
      ```
