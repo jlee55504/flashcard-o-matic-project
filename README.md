@@ -27,15 +27,15 @@ An application that allows users to create, add, edit, and delete decks and card
      ```
      git clone https://github.com/jlee55504/flashcard-o-matic-render-version.git
      ```
-  3. Navigate to the project directory:
+  2. Navigate to the project directory:
      ```
      cd flashcard-o-matic-render-version
      ```
-  5. Build the project:
+  3. Build the project:
      ```
      npm install
      ```
-  6. Run the application:
+  4. Run the application:
      ```
      npm start
      ```
