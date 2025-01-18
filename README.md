@@ -9,7 +9,7 @@ An application that allows users to create, add, edit, and delete decks and card
  - **User-friendly Interface:** Simple structured layout for easy navigation.
 
 ## Technologies Used
-  * **React:** Core programming language (React 18.2.0)
+  * **React.js:** Core programming language (React 18.2.0)
   * **React Bootstrap:** Provides React components for Bootstrap
   * **CSS:** Provides visual styling for the application
   * **HTML:** Visually displays the content of the application
