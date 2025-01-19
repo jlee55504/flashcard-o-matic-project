@@ -22,7 +22,7 @@ An application that allows users to create, add, edit, and delete decks and card
 ### Prerequisites
  - Node Package Manager (NPM)
 
- ### Installation:
+### Installation:
   1. Clone the repository:
      ```
      git clone https://github.com/jlee55504/flashcard-o-matic-render-version.git
