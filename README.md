@@ -41,7 +41,7 @@ An application that allows users to create, add, edit, and delete decks and card
      ```
 
 ## Usage
-Upon running the application, you'll be presented with the optons to:
+Upon running the application, you'll be presented with the options to:
  1. Create a new card deck
  2. View a deck of cards
  3. Study a deck of cards
