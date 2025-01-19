@@ -61,4 +61,6 @@ Navigate through the options by clicking the corresponding buttons.
 
 ## Acknowledgments
  - This project was built for the Chegg Skill's software engineering program
- - This was my first project using React.js and was extremely helpful learning the power and ease of using React 
+ - This project taught me how to use the "useEffect" React.js hook to 
+ immediately update the information displayed on the web page which was extremely helpful
+  in furthering my software engineer career.
