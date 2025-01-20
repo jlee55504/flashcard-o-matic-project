@@ -3,12 +3,14 @@
 An application that allows users to create, add, edit, delete decks, and delete cards in the decks used for studying.
 
 ## Features
+
  - **Decks of Cards Management:** Creates, edits, and deletes card decks.
  - **Card Management:** Creates, edits, and deletes the cards in the decks.
  - **Study Ability:** Memorize the answers to the problems on the cards to prepare for tests.
  - **User-friendly Interface:** Simple structured layout for easy navigation.
 
 ## Technologies Used
+
   * **React.js:** Core programming language (React 18.2.0)
   * **React Bootstrap:** Provides stylized React components
   * **CSS:** Provides visual styling for the application
@@ -16,20 +18,23 @@ An application that allows users to create, add, edit, delete decks, and delete 
   * **Jest:** Unit testing framework
 
 ## Screenshot
+
 ![Alt text](https://github.com/jlee55504/flashcard-o-matic-project/blob/main/src/imgs/Flashcard-o-matic%20project%20home%20screen%20image.png?raw=true "Flashcard-o-matic-project 'Layout/home' screen")
 
 ## Getting Started
+
 ### Prerequisites
  - Node Package Manager (NPM)
 
 ### Installation:
+
   1. Clone the repository:
      ```
-     git clone https://github.com/jlee55504/flashcard-o-matic-render-version.git
+     git clone https://github.com/jlee55504/flashcard-o-matic-project.git
      ```
   2. Navigate to the project directory:
      ```
-     cd flashcard-o-matic-render-version
+     cd flashcard-o-matic-project
      ```
   3. Build the project:
      ```
@@ -41,6 +46,7 @@ An application that allows users to create, add, edit, delete decks, and delete 
      ```
 
 ## Usage
+
 Upon running the application, you'll be presented with the options to:
  1. Create a new card deck
  2. View a deck of cards
@@ -50,6 +56,7 @@ Upon running the application, you'll be presented with the options to:
 Navigate through the options by clicking the corresponding buttons.
 
 ## Code Structure
+
  - ``src/Layout/index.js:`` Main application entry point
  - ``src/decks/CreateDeck.js:`` Creates new card decks
  - ``src/decks/Deck.js:`` Allows a deck to be edited, studied, or deleted. New cards can also be added 
@@ -61,6 +68,7 @@ Navigate through the options by clicking the corresponding buttons.
  - ``src/Layout/style.css:`` Handles the visual styling for the application
 
 ## Acknowledgments
+
  - This project was built for the Chegg Skill's software engineering program
  - This project taught me how to use the "useEffect" React.js hook to 
  immediately update the information displayed on the web page which was extremely helpful
