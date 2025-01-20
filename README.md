@@ -1,11 +1,11 @@
 # Flashcard-O-Matic Project
 
-An application that allows users to create, add, edit, and delete decks and cards in the decks used for studying.
+An application that allows users to create, add, edit, delete decks, and delete cards in the decks used for studying.
 
 ## Features
- - **Decks of Cards Management:** Create, update, and delete card decks.
- - **Card Management:** Create, edit, and delete the cards in the decks.
- - **Study Ability:** Memorize the answers to the questions on the cards to prepare for tests.
+ - **Decks of Cards Management:** Creates, edits, and deletes card decks.
+ - **Card Management:** Creates, edits, and deletes the cards in the decks.
+ - **Study Ability:** Memorize the answers to the problems on the cards to prepare for tests.
  - **User-friendly Interface:** Simple structured layout for easy navigation.
 
 ## Technologies Used
@@ -52,15 +52,16 @@ Navigate through the options by clicking the corresponding buttons.
 ## Code Structure
  - ``src/Layout/index.js:`` Main application entry point
  - ``src/decks/CreateDeck.js:`` Creates new card decks
- - ``src/decks/Deck.js:`` Allows a deck to be edited, studied, or deleted. New cards can also be added to the deck and current cards are displayed and can be edited or deleted
+ - ``src/decks/Deck.js:`` Allows a deck to be edited, studied, or deleted. New cards can also be added 
+ to the deck the current cards being displayed can be edited or deleted
  - ``src/decks/EditDeck.js:`` Allows the name and description of a deck to be edited
  - ``src/cards/Study.js:`` Displays the front and back of every card in the deck to prepare for tests
  - ``src/cards/AddCard.js:`` Allows new cards to be added to decks
- - ``src/cards/EditCard.js:`` Allows the front and back of every card to be changed
+ - ``src/cards/EditCard.js:`` Allows the front and back of every card to be edited
  - ``src/Layout/style.css:`` CSS styling for all the elements to replicate Chegg Skill's example web page
 
 ## Acknowledgments
  - This project was built for the Chegg Skill's software engineering program
  - This project taught me how to use the "useEffect" React.js hook to 
  immediately update the information displayed on the web page which was extremely helpful
-  in furthering my software engineer career.
+  in furthering my software engineering career.
