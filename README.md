@@ -58,7 +58,7 @@ Navigate through the options by clicking the corresponding buttons.
  - ``src/cards/Study.js:`` Displays the front and back of every card in the deck to prepare for tests
  - ``src/cards/AddCard.js:`` Allows new cards to be added to decks
  - ``src/cards/EditCard.js:`` Allows the front and back of every card to be edited
- - ``src/Layout/style.css:`` Provides visual styling for all the elements to replicate Chegg Skill's example web page
+ - ``src/Layout/style.css:`` Handles the visual styling for the application
 
 ## Acknowledgments
  - This project was built for the Chegg Skill's software engineering program
