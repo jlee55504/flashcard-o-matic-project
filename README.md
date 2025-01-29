@@ -18,7 +18,7 @@ An application built without React Bootstrap that allows users to create, add, e
 
 ## Screenshot
 
-![Alt text](https://github.com/jlee55504/flashcard-o-matic-project-qualified-version/blob/jl--flashcard-project-version-to-pass-cheggskills-test/src/imgs/Flashcard-o-matic%20project%20home%20screen%20image.png?raw=true "Flashcard-o-matic-project 'Layout/home' screen")
+![Alt text](https://github.com/jlee55504/flashcard-o-matic-project/blob/main/src/imgs/Flashcard-o-matic%20project%20home%20screen%20image.png?raw=true "Flashcard-o-matic-project 'Layout/home' screen")
 
 
 ## Getting Started
