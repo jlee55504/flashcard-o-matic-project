@@ -1,6 +1,6 @@
 # Flashcard-O-Matic Project
 
-An application that allows users to create, add, edit, delete decks, and delete cards in the decks used for studying.
+An application built without React Bootstrap that allows users to create, add, edit, delete decks, and delete cards in the decks used for studying.
 
 ## Features
 
@@ -11,30 +11,31 @@ An application that allows users to create, add, edit, delete decks, and delete 
 
 ## Technologies Used
 
-  * **React.js:** Core programming language (React 18.2.0)
-  * **React Bootstrap:** Provides stylized React components
-  * **CSS:** Provides visual styling for the application
+  * **React:** Core programming language (React 18.2.0)
+  * **CSS:** Provides visual styling of the application
   * **HTML:** Visually displays the content of the application
   * **Jest:** Unit testing framework
 
 ## Screenshot
 
-![Alt text](https://github.com/jlee55504/flashcard-o-matic-project/blob/main/src/imgs/Flashcard-o-matic%20project%20home%20screen%20image.png?raw=true "Flashcard-o-matic-project 'Layout/home' screen")
+![Alt text](https://github.com/jlee55504/flashcard-o-matic-project-qualified-version/blob/jl--flashcard-project-version-to-pass-cheggskills-test/src/imgs/Flashcard-o-matic%20project%20home%20screen%20image.png?raw=true "Flashcard-o-matic-project 'Layout/home' screen")
+
 
 ## Getting Started
 
 ### Prerequisites
- - Node Package Manager (NPM)
+
+  - Node Package Manager (NPM)
 
 ### Installation:
 
   1. Clone the repository:
      ```
-     git clone https://github.com/jlee55504/flashcard-o-matic-project.git
+     git clone https://github.com/jlee55504/flashcard-o-matic-project-qualified-version.git
      ```
   2. Navigate to the project directory:
      ```
-     cd flashcard-o-matic-project
+     cd flashcard-o-matic-project-qualified-version
      ```
   3. Build the project:
      ```
@@ -48,6 +49,7 @@ An application that allows users to create, add, edit, delete decks, and delete 
 ## Usage
 
 Upon running the application, you'll be presented with the options to:
+
  1. Create a new card deck
  2. View a deck of cards
  3. Study a deck of cards
@@ -57,15 +59,16 @@ Navigate through the options by clicking the corresponding buttons.
 
 ## Code Structure
 
- - ``src/Layout/index.js:`` Main application entry point
- - ``src/decks/CreateDeck.js:`` Creates new card decks
- - ``src/decks/Deck.js:`` Allows a deck to be edited, studied, or deleted. New cards can also be added 
+  - ``src/Layout/index.js:`` Main application entry point
+  - ``src/decks/CreateDeck.js:`` Creates new card decks
+  - ``src/decks/Deck.js:`` Allows a deck to be edited, studied, or deleted. New cards can also be added 
  to the deck the current cards being displayed can be edited or deleted
- - ``src/decks/EditDeck.js:`` Allows the name and description of a deck to be edited
- - ``src/cards/Study.js:`` Displays the front and back of every card in the deck to prepare for tests
- - ``src/cards/AddCard.js:`` Allows new cards to be added to decks
- - ``src/cards/EditCard.js:`` Allows the front and back of every card to be edited
- - ``src/Layout/style.css:`` Handles the visual styling for the application
+  - ``src/decks/EditDeck.js:`` Allows the name and description of a deck to be edited
+  - ``src/cards/Study.js:`` Displays the front and back of every card in the deck to prepare for tests
+  - ``src/cards/AddCard.js:`` Allows new cards to be added to decks
+  - ``src/cards/EditCard.js:`` Allows the front and back of every card to be edited
+  - ``src/Layout/style.css:`` Handles the visual styling of the application
+  - ``src/imgs/:`` A folder containing the screenshot of the application
 
 ## Acknowledgments
 
