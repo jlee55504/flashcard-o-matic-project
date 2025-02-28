@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 /* Imports the "Header" 'component' from './Header.js'. */
 import Header from "./Header";
+/* Imports the "Footer" 'component' from './Footer.js'. */
+import Footer from './Footer'
 /* Imports the "NotFound" 'component' from './NotFound.js'.  */
 import NotFound from "./NotFound";
 /* Imports the 'Routes', 'Route', 'useNavigate', and the 'useLocation' 
@@ -17,21 +19,24 @@ import './style.css';
 import Deck from '../decks/Deck';
 /* Imports the "AddCard" 'component' from '../cards/AddCard.js'. */
 import AddCard from '../cards/AddCard';
-/* Imports the "EditDeck" from '../decks/EditDeck.js'. */
+/* Imports the "EditDeck" from 'component' '../decks/EditDeck.js'. */
 import EditDeck from '../decks/EditDeck';
-/* Imports the "EditCard" from '../cards/EditCard.js'. */
+/* Imports the "EditCard" from 'component' '../cards/EditCard.js'. */
 import EditCard from '../cards/EditCard';
 /* Imports the "Study" 'component' from '../cards/Study.js'. */
 import Study from '../cards/Study';
 /* Imports the "listDecks" and "deleteDeck" 'functions/components'
  from '../utils/api/index.js'. */
-import { Image, Button }from 'react-bootstrap';
 import { listDecks, deleteDeck } from '../utils/api/index';
+// Imports all the images used in this 'component'
 import AddEditCards from '../cards//AddEditCards';
 import eye from '../imgs/eye.png'
 import add from '../imgs/add.png';
 import trashcan from '../imgs/trashcan.png';
 import book from '../imgs/book.png';
+// Imports 'react-bootstrap' 'Elements'
+import { Image, Button }from 'react-bootstrap';
+import { MDBCol, MDBRow, MDBContainer } from 'mdb-react-ui-kit';
 
 /* The "Layout" 'function/component' diplays the "Header" 'component' and the 
 "Home.js", "Study.js", "CreateDeck.js", "Deck.js", "EditDeck.js", "AddCard.js", 
@@ -118,57 +123,56 @@ function Layout() {
   /* This 'if statement' checks if the 'URL' is "/". If so, the "createDeckBtn" 
   'variable' will store a 'react-bootstrap' 'Button' 'element' that will load the
   "CreateDeck" 'component'. The "decks" 'variable' will also hold all data from
-  every "deck" on the local server via JSX 'elements'. If the 'URL' 'path' is 
+  every "deck" on the local server. If the 'URL' 'path' is 
   different, the "createDeckBtn" and the "CreateDeck" 'variable' will be given
   the value 'null'. */
   if ( location.pathname === "/" ) {
     createDeckBtn = <Button type="button" variant="secondary" className="Layout-index-create-deck-btn" 
     onClick={ () => navigate("/decks/new") } >
-      <Image src={ add }  className="add-img"
-      alt="plus-math" />
+      <Image src={ add } className="add-img"
+      alt="plus math icon" />
         Create Deck</Button>
     decks = decksList.map( ( deck, index ) => (
-      <div className="Layout-index-deck-div" key={ index } >
+      <MDBCol className=" Layout-index-deck-col col-xl-12 col-sm-12 col-xs-12 col-lg-12 col-md-12 px-3 py-3" key={ index } >
         <div className="Layout-index-header-card-count-div">
           <h2 className="Layout-index-deck-title">{ deck.name }</h2>
           <h5 className="Layout-index-card-count-div">{ deck.cards.length } cards</h5>
         </div>
         <p className="Layout-index-deck-description">{ deck.description }</p>
         <div className="Layout-index-btns-div">
+          <div className="first-index-btns-div">
           <Button variant="secondary" type="button" className="Layout-index-view-deck-btn" 
           onClick={ () => navigate(`/decks/${deck.id}`) } >
             <Image src={ eye } className="eye-img" 
-            alt="external-app-web-application-v1-creatype-glyph-colourcreatype-52" />
-              View</Button> 
+            alt="imgage of eye icon" />
+              View</Button>    
           <Button variant="primary" type="button" className="Layout-index-study-deck-btn" 
           onClick={ () => navigate(`/decks/${deck.id}/study`) } >
             <Image src={ book }
-            className="book-img" alt="bookmark" />
+            className="book-img" alt="bookmark icon" />
             Study</Button>
+            </div> 
           <Button type="button" variant="danger" className="Layout-index-delete-deck-btn" value={ index } 
           onClick={ () => handleDeleteDeck( deck.id ) }>
             <Image src={ trashcan }
-            className="trashcan-img" alt="trash" />
+            className="trashcan-img" alt="trashcan icon" />
           </Button>     
         </div>
-      </div>
+      </MDBCol>
     ) );
   } else {
       createDeckBtn = null;
       decks = null;
     }
-  /* A 'div' JSX 'element' is returned with the "Header" 'component' inside. Also 
-  inside is another 'div' JSX 'element' with the 'className' "container". Inside 
-  are the "createDeckBtn" and "decks" 'variables' and a 'Routes' JSX 'components' 
-  with the 'routes' to the "Study", "CreateDeck", "Deck", "EditDeck", "AddCard", 
-  "AddEditCards",and the "EditCard" 'components' via 'Route' JSX 'elements'.*/
+ 
   return (
     <div>
       <Header />
-      <div className="container">
+      <MDBContainer className="g-0">
         {/* TODO: Implement the screen starting here */}
-        { createDeckBtn }
-        { decks }
+        <MDBRow>
+        <MDBRow className="mb-4 ml-3 create-deck-btn-row g-0">{ createDeckBtn }</MDBRow>
+        <MDBRow className="mx-3 mb-4 g-0 decks-row">{ decks }</MDBRow>
         <Routes>
           <Route path="/" element={ Layout } /> 
           <Route path="/decks/new" element={ <CreateDeck /> } />
@@ -179,8 +183,10 @@ function Layout() {
           <Route path="/decks/:deckId/cards/:cardId/edit/*" element={ <> <EditCard /> <AddEditCards /> </> } />
           <Route path="*" element={ <NotFound /> } />
         </Routes>
-      </div>      
-    </div>
+        </MDBRow>
+      </MDBContainer>
+      <Footer />
+    </div>      
   );
 }
 
