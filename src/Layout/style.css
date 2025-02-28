@@ -1,5 +1,11 @@
 /* Start of 'universal' 'elements' */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .btn:not(:disabled):not(.disabled) {
     cursor: pointer;
 }
@@ -59,8 +65,8 @@ label {
 }
 
 .eye-img {
-    width:18px;
-    height:28px;
+    width:24px;
+    height:34px;
     font-weight: bold;
     margin-right: .25rem;
 }
@@ -68,9 +74,6 @@ label {
 .book-img {
 
 }
-
-
-
 
 .home-link {
     text-decoration: none;
@@ -88,45 +91,76 @@ label {
     margin-bottom: 2rem;
 }
 
+
+
 .edit-img {
 
 }
 
 .add-img {
-    width: 20px;
-    height: 21px;
+    width: 28px;
+    height: 30px;
 }
 
 /* End of 'universal' 'elements' */
 
+/* Start of ./Layout/Footer.js */
+
+/* End of Layout/Footer.js */
+
+.end-footer {
+    padding: 1rem;
+}
+
+.footer-p {
+  
+}
+
 /* Start of './Layout/index.js' */
 
-.Layout-index-deck-div {
+.Layout-index-deck-col {
     border: 1px solid #dfd6d6;
-    padding: 1.1rem;
+    /*padding: 1.1rem;*/
     border-radius: 5px;
 }
+
+.decks-row {
+    gap: 1rem;
+}
+
+/*.create-deck-btn-row, .decks-row {
+    margin-bottom: 2rem !important;
+}*/
 
 .Layout-index-create-deck-btn {
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-bottom: 1%;
+    padding-left: .344rem;
+    /*margin-top: .5rem;
+    margin-bottom: 1%;*/
 }
 
 .trashcan-btn {
     justify-self: flex-end;
 }
+
 .Layout-index-btns-div {
     display: flex;
+    justify-content: space-between;
+}
+
+.first-index-btns-div {
+    display: flex;
+    gap: 12px;
 }
 
 .Layout-index-view-deck-btn {
- margin-right: 1%; 
+ /*margin-right: 1%;*/ 
  background-color: #6c757d;
  color: #fff;
  border:1px solid #6c757d;
- padding: .01rem 2.75rem;
+ padding: .01rem 3.009rem .01rem 2.5855rem;
  border-radius: 6px;
  text-decoration: none; 
  align-items: center;
@@ -136,10 +170,10 @@ label {
 }
 
 .Layout-index-study-deck-btn {
-    margin-right: 72%; 
+    /*margin-right: 72%;*/ 
     background-color: #0d6efd;
     color:#fff;
-    padding: .1rem 3.25rem .1rem 2.75rem;
+    padding: .1rem 2.89rem .1rem 2.75rem;
     border-radius: 6px;
     text-decoration: none;
     display: flex;
