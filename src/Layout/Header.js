@@ -1,12 +1,12 @@
 import React from "react";
-
+import { MDBContainer } from 'mdb-react-ui-kit';
 function Header() {
   return (
     <header className="jumbotron bg-dark">
-      <div className="container text-white">
+      <MDBContainer className="text-white">
         <h1 className="display-4">Flashcard-o-matic</h1>
         <p className="lead">Discover The Flashcard Difference.</p>
-      </div>
+      </MDBContainer>
     </header>
   );
 }
