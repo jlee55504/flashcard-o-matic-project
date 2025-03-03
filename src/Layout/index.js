@@ -133,7 +133,7 @@ function Layout() {
       alt="plus math icon" />
         Create Deck</Button>
     decks = decksList.map( ( deck, index ) => (
-      <MDBCol className=" Layout-index-deck-col col-xl-12 col-sm-12 col-xs-12 col-lg-12 col-md-12 px-3 py-3" key={ index } >
+      <MDBCol className="Layout-index-deck-col col-12 px-3 pt-3 pb-2" key={ index } >
         <div className="Layout-index-header-card-count-div">
           <h2 className="Layout-index-deck-title">{ deck.name }</h2>
           <h5 className="Layout-index-card-count-div">{ deck.cards.length } cards</h5>
@@ -166,13 +166,13 @@ function Layout() {
     }
  
   return (
-    <div>
+    <div className="">
       <Header />
-      <MDBContainer className="g-0">
+      <MDBContainer className="Layout-index-container">
         {/* TODO: Implement the screen starting here */}
-        <MDBRow>
-        <MDBRow className="mb-4 ml-3 create-deck-btn-row g-0">{ createDeckBtn }</MDBRow>
-        <MDBRow className="mx-3 mb-4 g-0 decks-row">{ decks }</MDBRow>
+        <MDBRow className="">
+        <MDBRow className="ml-3 create-deck-btn-row">{ createDeckBtn }</MDBRow>
+        <MDBRow className="mx-3 decks-row">{ decks }</MDBRow>
         <Routes>
           <Route path="/" element={ Layout } /> 
           <Route path="/decks/new" element={ <CreateDeck /> } />
