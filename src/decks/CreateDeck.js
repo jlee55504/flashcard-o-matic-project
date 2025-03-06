@@ -7,9 +7,11 @@ import {Link, useNavigate } from 'react-router-dom';
 import { createDeck } from '../utils/api/index';
 /* Imports the "classNames" from '../utils/class-names/index.js'. */
 import { classNames } from '../utils/class-names/index';
-import { Button, Image } from 'react-bootstrap';
+// Imports the image used in this 'component'
 import home from '../imgs/home.png';
-
+// Imports 'react-bootstrap' 'Elements'
+import { Button, Image } from 'react-bootstrap';
+import { MDBCol, MDBRow, MDBContainer } from 'mdb-react-ui-kit';
 /* The "CreateDeck" 'function/component' displays the "nav-bar" 'div' containing 
 a 'link' to the "Home page" ('src/Layout/index.js') and a 'form' allowing users 
 to 'create' a new "deck" and add it to the 'local server'.  */
@@ -77,32 +79,41 @@ function CreateDeck() {
     JSX 'element's' 'onClick' 'attribute' has the "navigate" 'variable' for its
     value with "/" as its 'argument'. */
     return (
-      <div>
-        <div className='nav-bar'><Link to="/" className='home-link' >
-          <Image src={ home } 
-          alt="home" className='home-icon'/>
-            Home</Link> / Create Deck</div>
-        <h1 className='CreateDeck-create-deck-h1'>Create Deck</h1>
-        <form onSubmit={ handleSubmit }>
-          <label htmlFor='CreateDeck-name'>
-            Name
-            <input type='text' name="CreateDeck-name" id="CreateDeck-name" placeholder='Deck Name' 
-            onChange={ handleChange } value={ name } required />
-          </label>
-          <label htmlFor='CreateDeck-description'>
-            Description
-            <textarea id="CreateDeck-description" name="CreateDeck-description" 
-            placeholder='Brief description of the deck' onChange={ handleChange } 
-            value={ description } required >
-            </textarea>
-          </label>
-          <Button type='button' className='CreateDeck-cancel-btn' variant='secondary'
-          onClick={ () => navigate("/") }>Cancel
-          </Button>
-          <Button type='submit' className='CreateDeck-submit-btn' variant='primary' >Submit
-          </Button>
-        </form>
-      </div>
+      <MDBRow className='mx-4 px-2 Create-deck-row'>
+        <MDBRow className='nav-bar-row'> 
+          <MDBCol className='nav-bar col-12'>
+            <Link to="/" className='home-link' >
+              <Image src={ home } alt="home" className='home-icon'/>
+            Home
+            </Link> / Create Deck
+          </MDBCol>
+        </MDBRow>
+        <MDBRow className='Create-deck-heading/form-row'>
+          <MDBCol className='col-12 Create-deck-form-col pb-3'> 
+            <h1 className='CreateDeck-create-deck-h1'>Create Deck</h1>
+            <form className='Create-deck-form' onSubmit={ handleSubmit }>
+              <label htmlFor='CreateDeck-name'>
+                Name
+                <input type='text' name="CreateDeck-name" id="CreateDeck-name" placeholder='Deck Name' 
+                onChange={ handleChange } value={ name } required />
+              </label>
+              <label htmlFor='CreateDeck-description'>
+                Description
+                <textarea id="CreateDeck-description" name="CreateDeck-description" 
+                  placeholder='Brief description of the deck' onChange={ handleChange } 
+                  value={ description } required >
+                </textarea>
+              </label>
+              <div><Button type='button' className='CreateDeck-cancel-btn' variant='secondary'
+                onClick={ () => navigate("/") }>Cancel
+              </Button>
+              <Button type='submit' className='CreateDeck-submit-btn' variant='primary' >Submit
+              </Button></div>
+              
+            </form>
+          </MDBCol>
+        </MDBRow>
+      </MDBRow>
       );
   }
   
