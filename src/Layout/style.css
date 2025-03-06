@@ -102,20 +102,44 @@ label {
 
 /* Start of media queries */
 
-@media (min-height: 1025px) {
+@media (min-height: 933px) {
     .Layout-index-container {
         /*background-color: red;*/
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3.5rem;
     }
 
     .decks-row {
-        gap: 5.45rem !important;
-        margin-bottom: 2rem !important;;
+        /*gap: 5.45rem !important;*/
+        margin-bottom: 2rem !important;
     }
 
     .Layout-index-deck-col {
         padding: 1.25rem 1.25rem 1rem 1.25rem !important;
     }
+    .Create-deck-row {
+        /*padding-bottom: 50%;*/
+    }
+    .CreateDeck-create-deck-h1 {
+        /*margin-bottom: 1.5rem !important;*/
+    }
+    .Create-deck-form {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .end-footer {
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+    }
+    .Layout-main-row { 
+        min-height: 10vh !important;
+    }
 }
+
 
 /* end  of media queries */
 
@@ -123,7 +147,8 @@ label {
 
 .end-footer {
     padding: 1rem;
-    border-radius: .3rem .3rem 0 0;;
+    border-radius: .3rem .3rem 0 0;
+    
 }
 
 /* End of Layout/Footer.js */
@@ -135,6 +160,14 @@ label {
 }
 
 /* Start of './Layout/index.js' */
+
+.Layout-main-row {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 300px);
+    /*min-height: 70vh;
+    max-height: 40vh;*/
+}
 
 .Layout-main-index-container {
     padding: 0;
@@ -329,26 +362,28 @@ label {
 
 .Create-deck-row {
     flex-direction: column;
-    width: 100%;
+    /*width: 100%;*/
+    margin-bottom: 2rem;
 }
 
 .Create-deck-form-col {
     padding: 0 .1rem;
 }
 
-.createDeck-create-deck-h1 {
-
+.CreateDeck-create-deck-h1 {
+   margin-bottom: 1rem;
 }
 
 #CreateDeck-name, #CreateDeck-description {
     display: block;
     width: 100%;
     margin-top: .5rem;
-    padding: .5rem;
+    padding: .6rem;
+    border:rgb(118, 118, 118) 1px solid;
 }
 
 #CreateDeck-description {
-    height: 10rem;
+    height: 11rem;
 }
 .CreateDeck-cancel-btn {
     margin-right: .5rem;
@@ -356,6 +391,11 @@ label {
 .CreateDeck-submit-btn {
 
 }
+
+.Create-deck-form {
+
+}
+
 /* End of CreateDeck.js */
 
 
