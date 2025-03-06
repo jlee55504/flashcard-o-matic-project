@@ -62,7 +62,7 @@ function Layout() {
   /* The "location" holds the 'useLocation' 'component'. */
   const location = useLocation();
   const [ loadDeckInfo, setLoadDeckInfo ] = useState( false );
-
+  
   useEffect(() => {
     async function loadTheDeckInfo() {
       try {
@@ -87,6 +87,7 @@ function Layout() {
       try {
         const listOfDecks = await listDecks( abortController.signal );
         setDecksList( listOfDecks );
+        
       } catch ( error ) {
           console.log( error );
         } 
@@ -170,9 +171,11 @@ function Layout() {
       <Header />
       <MDBContainer className="Layout-index-container">
         {/* TODO: Implement the screen starting here */}
-        <MDBRow className="">
-        <MDBRow className="ml-3 create-deck-btn-row">{ createDeckBtn }</MDBRow>
-        <MDBRow className="mx-3 decks-row">{ decks }</MDBRow>
+        <MDBRow className="Layout-main-row">
+          {location.pathname === "/" ? <>
+          <MDBRow className="ml-3 create-deck-btn-row">{ createDeckBtn }</MDBRow>
+          <MDBRow className="mx-3 decks-row">{ decks }</MDBRow>
+          </> : <></>}
         <Routes>
           <Route path="/" element={ Layout } /> 
           <Route path="/decks/new" element={ <CreateDeck /> } />
