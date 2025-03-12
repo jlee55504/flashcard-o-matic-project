@@ -8,13 +8,15 @@ import { classNames } from '../utils/class-names/index';
 /* Imports the "readDeck", the "deleteCard" and the "deleteDeck" 
 'functions/components' from '../utils/api/index.js'. */
 import { readDeck, deleteCard, deleteDeck } from '../utils/api/index';
-import { Button, Image } from 'react-bootstrap';
+// Imports all the images used in this 'component'
 import edit from '../imgs/edit.png';
 import book from '../imgs/book.png';
 import add from '../imgs/add.png';
 import trashcan from '../imgs/trashcan.png';
 import home from '../imgs/home.png';
-
+// Imports 'react-bootstrap' 'Elements'
+import { MDBCol, MDBRow, MDBContainer } from 'mdb-react-ui-kit';
+import { Button, Image } from 'react-bootstrap';
 /* The "Deck" 'function/component' displays the the "nav-bar" 'div' (which 
 contains a 'link' to the "Home page" ('src/Layout/index.js')), the info for 
 the specified "deck", 'button' JSX 'elements' to 'edit' ('EditDeck.js'), 
@@ -39,7 +41,7 @@ function Deck() {
     /* The "abortcontroller" holds a 'new AbortController' 'method'. */
     const abortController = new AbortController();
     const [loadDeckInfo, setLoadDeckInfo] = useState( false );
-  console.log(deckId)
+
     useEffect(() => {
       async function loadTheDeckInfo() {
         try {
@@ -124,7 +126,9 @@ function Deck() {
           return () => abortController.abort();
           }
     }
-  
+  //console.log(window.screen.height > 933)
+  console.log(window.screen.height)
+  console.log(window.screen.width)
     /* A 'div' JSX 'element' is 'returned' with the "nav-bar" 'div' inside which 
     contains a 'Link' JSX 'component' (which brings users to the "Home page") with
     an 'img' JSX 'element' inside with the 'text' "Home" followed by the text 
@@ -161,65 +165,80 @@ function Deck() {
     its 'onClick' 'attribute'. If the "deckCards" 'variable's' is 'falsey', an 
     empty 'div' JSX 'element' is 'returned' instead. */
     return (
-      <div>
-        <div className='nav-bar'><Link to="/" className='home-link' >
-          <Image src={ home } 
-          alt="home" className='home-icon' />
-            Home</Link> / { deck.name }</div>
-        <div className="Deck-select-deck-div">
-          <h3>{ deck.name }</h3>
+      <MDBRow className='mx-4 px-2 Deck-main-row'>
+        <MDBRow className='nav-bar-row'>
+          <MDBCol className='nav-bar col-12'>
+            <Link to="/" className='home-link' >
+              <Image src={ home } 
+                alt="home" className='home-icon' />
+                  Home
+              </Link> / { deck.name }
+            </MDBCol>
+          </MDBRow>
+          <MDBRow className='Deck-deck-row'>
+              <MDBCol className="Deck-deck-col col-12 px-0 py-0 mx-0 py-0">
+              <h3>{ deck.name }</h3>
           <p>{ deck.description }</p>
-          <div className="Deck-select-deck-btns-div">
-            <Button type="button" className="Deck-edit-deck-btn" variant="secondary"
+          <div className="Deck-deck-btns-div">
+            <div className='first-Deck-btns-div'>
+            <Button type="button" className="Deck-deck-edit-deck-btn" variant="secondary"
              onClick={ ()=> navigate(`/decks/${ deckId }/edit`) } >
-              <Image src={ edit } 
-              alt="edit--v1"/>
+              <Image src={ edit } className='Deck-deck-edit-image'
+              alt="edit icon"/>
                 Edit
             </Button>
-            <Button type="button" variant="primary" className="Deck-study-deck-btn" 
+            <Button type="button" variant="primary" className="Deck-deck-study-btn" 
             onClick={ ()=> navigate(`/decks/${ deckId }/study`) } >
               <Image src={ book } 
-              alt="bookmark" className="book-img" />
+              alt="bookmark icon" className="Deck-deck-book-image" />
                 Study
             </Button>
-            <Button type="button" className="Deck-add-cards-to-deck-btn" variant="primary"
+            <Button type="button" className="Deck-deck-add-cards-to-deck-btn" variant="primary"
             onClick={ ()=> navigate(`/decks/${ deckId }/cards/new`) } >
-              <Image src={ add } className="add-img"
-              alt="plus-math"/>
+              <Image src={ add } className="Deck-deck-add-image"
+              alt="plus-math icon"/>
                 Add Cards
             </Button>
-            <Button type="button" className="Deck-delete-deck-btn" variant="danger"
+            </div>
+            <Button type="button" className="Deck-deck-delete-deck-btn" variant="danger"
             onClick={ () => handleDeleteDeck( deckId ) } >
               <Image src={ trashcan } 
-              className="trashcan-img" alt="trash" />
+              className="Deck-deck-trashcan-image" alt="trashcan icon" />
             </Button>
-          </div>
-        </div>
-        <h2>Cards</h2>
-        {deckCards ? deckCards.map(( card, index ) => (
-          <div className="Deck-card-div" key={ index } >
+            </div>
+              </MDBCol>
+            </MDBRow>
+            <MDBRow className="Deck-card-row">    
+            <h2>Cards</h2>
+            {deckCards ? deckCards.map(( card, index ) => (
+          <MDBCol className="Deck-card-col col-12 px-3 pt-3 pb-2 col-12" key={ index } >
             <div className="Deck-card-div-front-div" >
               <p className="Deck-card-div-front-p" >{ card.front }</p>
             </div>
             <div className="Deck-card-div-back-div" >
               <p className="Deck-card-div-back-p" >{ card.back }</p>
               <div className="Deck-card-div-btns-div" >
-                <Button variant="secondary" type="button" className="Deck-edit-card-btn" 
+                <Button variant="secondary" type="button" className="Deck-card-edit-card-btn" 
                 onClick={ ()=> navigate(`/decks/${ deckId }/cards/${ card.id }/edit`) } >
-                  <Image src={ edit }
-                  alt="edit--v1"/>
+                  <Image src={ edit } className='Deck-card-edit-image'
+                  alt="edit icon"/>
                     Edit
                 </Button>
-                <Button variant="danger" type="button" className="Deck-delete-card-btn" 
+                <Button variant="danger" type="button" className="Deck-card-delete-card-btn" 
                 onClick={ () => handleDeleteCard( card.id ) } >
-                  <Image src={ trashcan } className="trashcan-img"
-                  alt="trash" />
+                  <Image src={ trashcan } className="Deck-card-trashcan-image"
+                  alt="trash icon" />
                 </Button>
               </div>
             </div>
-          </div>
+          </MDBCol>
         )) : <></>}
-      </div>
+            
+          </MDBRow>
+        
+        
+       
+      </MDBRow>
       );
   }
   
