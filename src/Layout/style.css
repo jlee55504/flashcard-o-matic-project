@@ -589,7 +589,7 @@ background-color: #d7d7d7d9;
 }
 
 .EditCard-cancel-btn, .EditCard-submit-btn {
-  padding: .4rem .7rem;
+    padding: .4rem .7rem;
 }
 .EditCard-submit-btn {
 
@@ -623,7 +623,6 @@ background-color: #d7d7d7d9;
 
 @media (min-height: 933px) {
     .Layout-index-container {
-        /*background-color: red;*/
         min-height: 100%;
         display: flex;
         flex-direction: column;
@@ -676,7 +675,7 @@ background-color: #d7d7d7d9;
     .Deck-deck-add-cards-to-deck-btn {
         padding: 0 .4rem 0 .2rem !important;
         width: 7.1rem !important;
-      }
+    }
     .Deck-deck-delete-deck-btn {
         padding: 0 .6rem !important;
         /*position: relative;
@@ -734,7 +733,7 @@ background-color: #d7d7d7d9;
     .Deck-deck-add-cards-to-deck-btn {
         padding: 0 .4rem 0 .2rem !important;
         width: 7.1rem !important;
-      }
+    }
     .Deck-deck-delete-deck-btn {
         padding: 0 .6rem !important;
         /*position: relative;
