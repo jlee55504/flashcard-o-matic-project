@@ -170,7 +170,7 @@ function Deck() {
           <MDBCol className='nav-bar col-12'>
             <Link to="/" className='home-link' >
               <Image src={ home } 
-                alt="home" className='home-icon' />
+                alt="home icon" className='home-icon' />
                   Home
               </Link> / { deck.name }
             </MDBCol>
@@ -180,11 +180,11 @@ function Deck() {
               <h3>{ deck.name }</h3>
           <p>{ deck.description }</p>
           <div className="Deck-deck-btns-div">
-            <div className='first-Deck-btns-div'>
+            <div className='first-deck-btns-div'>
             <Button type="button" className="Deck-deck-edit-deck-btn" variant="secondary"
              onClick={ ()=> navigate(`/decks/${ deckId }/edit`) } >
               <Image src={ edit } className='Deck-deck-edit-image'
-              alt="edit icon"/>
+              alt="edit icon" />
                 Edit
             </Button>
             <Button type="button" variant="primary" className="Deck-deck-study-btn" 
@@ -227,7 +227,7 @@ function Deck() {
                 <Button variant="danger" type="button" className="Deck-card-delete-card-btn" 
                 onClick={ () => handleDeleteCard( card.id ) } >
                   <Image src={ trashcan } className="Deck-card-trashcan-image"
-                  alt="trash icon" />
+                  alt="trashcan icon" />
                 </Button>
               </div>
             </div>
