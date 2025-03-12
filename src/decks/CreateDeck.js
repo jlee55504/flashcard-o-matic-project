@@ -79,19 +79,19 @@ function CreateDeck() {
     JSX 'element's' 'onClick' 'attribute' has the "navigate" 'variable' for its
     value with "/" as its 'argument'. */
     return (
-      <MDBRow className='mx-4 px-2 Create-deck-row'>
+      <MDBRow className='mx-4 px-2 CreateDeck-main-row'>
         <MDBRow className='nav-bar-row'> 
           <MDBCol className='nav-bar col-12'>
             <Link to="/" className='home-link' >
-              <Image src={ home } alt="home" className='home-icon'/>
+              <Image src={ home } alt="home icon" className='home-icon'/>
             Home
             </Link> / Create Deck
           </MDBCol>
         </MDBRow>
-        <MDBRow className='Create-deck-heading/form-row'>
-          <MDBCol className='col-12 Create-deck-form-col pb-3'> 
+        <MDBRow className='CreateDeck-heading-form-row'>
+          <MDBCol className='col-12 CreateDeck-form-col pb-3'> 
             <h1 className='CreateDeck-create-deck-h1'>Create Deck</h1>
-            <form className='Create-deck-form' onSubmit={ handleSubmit }>
+            <form className='CreateDeck-form' onSubmit={ handleSubmit }>
               <label htmlFor='CreateDeck-name'>
                 Name
                 <input type='text' name="CreateDeck-name" id="CreateDeck-name" placeholder='Deck Name' 
@@ -108,8 +108,8 @@ function CreateDeck() {
                 onClick={ () => navigate("/") }>Cancel
               </Button>
               <Button type='submit' className='CreateDeck-submit-btn' variant='primary' >Submit
-              </Button></div>
-              
+              </Button>
+              </div>
             </form>
           </MDBCol>
         </MDBRow>
