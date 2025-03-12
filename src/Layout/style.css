@@ -331,18 +331,21 @@ label {
 
 /* Start of CreateDeck.js */
 
-.Create-deck-row, .Deck-main-row {
+.CreateDeck-main-row, .Deck-main-row, .EditDeck-main-row {
     flex-direction: column;
     /*width: 100%;*/
     margin-bottom: 2rem;
 }
 
-.Create-deck-form-col {
+.CreateDeck-form-col {
     padding: 0 .1rem;
 }
 
 .CreateDeck-create-deck-h1 {
    margin-bottom: 1rem;
+}
+.CreateDeck-heading-form-row {
+
 }
 
 #CreateDeck-name, #CreateDeck-description {
@@ -363,7 +366,7 @@ label {
 
 }
 
-.Create-deck-form {
+.CreateDeck-form {
 
 }
 
@@ -637,13 +640,13 @@ background-color: #d7d7d7d9;
     .Layout-index-deck-col {
         padding: 1.25rem 1.25rem 1rem 1.25rem !important;
     }
-    .Create-deck-row {
+    .CreateDeck-main-row, .EditDeck-main-row {
         /*padding-bottom: 50%;*/
     }
     .CreateDeck-create-deck-h1 {
         /*margin-bottom: 1.5rem !important;*/
     }
-    .Create-deck-form {
+    .CreateDeck-form {
         display: flex;
         flex-direction: column;
         gap: 3rem;
