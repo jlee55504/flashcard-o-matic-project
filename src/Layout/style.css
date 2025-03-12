@@ -60,23 +60,23 @@ label {
     margin-bottom: 1.5rem;
 }
 
-.eye-img {
-    width:24px;
-    height:34px;
+.Layout-index-eye-image {
+    width: 1.5rem;
+    height: 2.1rem;
     font-weight: bold;
     margin-right: .25rem;
 }
 
-.book-img {
-
-}
-
 .home-link {
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-right: .45rem;
 }
 
 .home-icon {
-    vertical-align: sub;
+    width: 1.5rem;
+    height: 1.6rem;
     margin-right: .4rem;
 }
 
@@ -87,61 +87,18 @@ label {
     font-size: 1.3rem;
     padding: 1rem;
     margin-bottom: 2rem;
+    display: flex;
 }
 
-.edit-img {
 
+
+.Layout-index-add-image {
+    width: 1.75rem;
+    height: 1.85rem;
 }
 
-.add-img {
-    width: 28px;
-    height: 30px;
-}
 
 /* End of 'universal' 'elements' */
-
-/* Start of media queries */
-
-@media (min-height: 933px) {
-    .Layout-index-container {
-        /*background-color: red;*/
-        min-height: 100%;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 3.5rem;
-    }
-
-    .decks-row {
-        /*gap: 5.45rem !important;*/
-        margin-bottom: 2rem !important;
-    }
-
-    .Layout-index-deck-col {
-        padding: 1.25rem 1.25rem 1rem 1.25rem !important;
-    }
-    .Create-deck-row {
-        /*padding-bottom: 50%;*/
-    }
-    .CreateDeck-create-deck-h1 {
-        /*margin-bottom: 1.5rem !important;*/
-    }
-    .Create-deck-form {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-    }
-    .end-footer {
-        bottom: 0;
-        width: 100%;
-        position: fixed;
-    }
-    .Layout-main-row { 
-        min-height: 10vh !important;
-    }
-}
-
-
-/* end  of media queries */
 
 /* Start of ./Layout/Footer.js */
 
@@ -179,7 +136,7 @@ label {
     border-radius: 5px;
 }
 
-.decks-row {
+.decks-row, .Deck-card-row {
     gap: 1rem;
     margin-bottom: 2rem !important;
 }
@@ -205,14 +162,14 @@ label {
     justify-self: flex-end;
 }
 
-.Layout-index-btns-div {
+.Layout-index-btns-div, .Deck-deck-btns-div {
     display: flex;
     justify-content: space-between;
 }
 
-.first-index-btns-div {
+.first-index-btns-div, .first-deck-btns-div {
     display: flex;
-    gap: 12px;
+    gap: .75rem;
 }
 
 .Layout-index-view-deck-btn {
@@ -350,6 +307,20 @@ label {
 .Layout-indexheader-card-count-div {
 
 }
+
+.Layout-index-trashcan-image {
+
+}
+
+.Layout-index-book-image, .Layout-index-trashcan-image {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.Layout-index-book-image {
+
+}
+
 /* End of './Layout/index.js' */
 
 /* Start of './Layout/Header.js' */
@@ -360,7 +331,7 @@ label {
 
 /* Start of CreateDeck.js */
 
-.Create-deck-row {
+.Create-deck-row, .Deck-main-row {
     flex-direction: column;
     /*width: 100%;*/
     margin-bottom: 2rem;
@@ -440,40 +411,71 @@ label {
 
 
 /* Start of Deck.js */
-.Deck-select-deck-btns-div {
-display: flex;
+
+.Deck-deck-row {
+
 }
 
-.Deck-select-deck-btns-div > * {
-    margin-right: .5rem;
+.Deck-deck-btns-div {
+
 }
 
-.Deck-select-deck-btns-div :nth-child(3) {
+.Deck-card-trashcan-image {
+    width: 1.7rem;
+    height: 1.75rem;
 }
 
-.Deck-delete-deck-btn {
+.Deck-card-edit-image {
+    width: 1.3rem;
+    height: 1.25rem;
+}
+
+.Deck-deck-trashcan-image {
+    width: 1.8rem;
+    height: 1.8rem;    
+}
+
+.Deck-deck-btns-div > * {
+    /*margin-right: .5rem;*/
+}
+
+.Deck-deck-btns-div :nth-child(3) {
+
+}
+
+.Deck-deck-delete-deck-btn {
   padding: 0 .6rem;
-  position: relative;
-  left: 67.77%;
+  /*position: relative;
+  left: 67.77%;*/
+  margin-right: 1rem;
+  width: 3rem;
+  height: 3rem;
 }
-.Deck-delete-card-btn {
+.Deck-card-delete-card-btn {
   padding: .4rem .5rem;
 }
 
- .Deck-add-cards-to-deck, .Deck-study-deck-btn, .Deck-edit-deck-btn {
+ .Deck-add-cards-to-deck, .Deck-edit-deck-btn {
   padding: 0 .6rem 0 .4rem;
 }
-.Deck-delete-card-btn {
-  
+
+.Deck-deck-edit-deck-btn {
+    padding: 0rem .69rem 0rem .295rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.2812rem;
+    gap: .154rem;
 }
-.Deck-card-div {
+
+.Deck-card-col {
     border: 1px solid #dfd6d6;
     padding: 1.1rem;
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    gap: 30px;
+    /*width: 100%;*/
+    gap: 5rem;
 }
 
 .Deck-card-div-btns-div {
@@ -481,7 +483,8 @@ display: flex;
     gap: .5rem;
 }
 .Deck-card-div-front-div {
-    width: 21%;
+    width: 50%;
+    height: 100%;
 }
 
 .Deck-card-div-front-p {
@@ -492,19 +495,20 @@ display: flex;
     display: flex;
     flex-direction: column;
     align-items: end;
-    width: 21%;
-    justify-content: center;
+    width: 50%;
+    height: 100%;
+    /*justify-content: center;*/
 }
 
 .Deck-card-div-back-p {
 
 }
 
-.Deck-select-deck-div {
-    margin-bottom: 1.5rem;
+.Deck-deck-col {
+    margin-bottom: 2rem;
 }
-.card-div:has(.Deck-card-div-back-div):has(.Deck-card-div-btns-div):has(.Deck-delete-card-btn):active,
-.Deck-select-deck-div:has(.select-deck-btns-div):has(.Deck-delete-deck-btn):active {
+.card-div:has(.Deck-card-div-back-div):has(.Deck-card-div-btns-div):has(.Deck-card-delete-card-btn):active,
+.Deck-deck-col:has(.select-deck-btns-div):has(.Deck-deck-delete-deck-btn):active {
 background-color: #d7d7d7d9;
 }
 .Deck-cards-div {
@@ -515,28 +519,41 @@ background-color: #d7d7d7d9;
 
 }
 
-.Deck-edit-card-btn {
+.Deck-card-edit-card-btn {
   padding: .4rem .7rem .4rem .4rem;
+  width: 4rem;
+  gap: .165rem;
 }
-.Deck-study-deck-btn {
+.Deck-deck-study-btn {
+    width: 4.3rem;
+    padding: .7rem 0.33rem .7rem 0.1rem;
+    gap: .09rem;
+}
+.Deck-deck-add-cards-to-deck-btn {
+  padding: 0 .29rem 0 .08rem;
+  width: 4.56rem;
+}
 
-}
-.Deck-add-cards-to-deck-btn {
-  padding-right: 12px;
-}
-
- .Deck-add-cards-to-deck-btn, .Deck-edit-deck-btn, .Deck-study-deck-btn, .Deck-delete-deck-btn, .Deck-edit-card-btn, .Deck-delete-card-btn {
+ .Deck-deck-add-cards-to-deck-btn, .Deck-edit-deck-btn, .Deck-deck-study-btn, .Deck-deck-delete-deck-btn, .Deck-card-edit-card-btn, .Deck-card-delete-card-btn {
    display: flex;
-
    align-items: center;
-   justify-content: space-between;
-   gap: 2px;
+   justify-content: center;
  }
 
-.Deck-edit-deck-btn {
- 
+ .Deck-deck-edit-image {
+    width: 1.3rem;
+    height: 1.46rem;
  }
 
+ .Deck-deck-book-image {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.Deck-deck-add-image {
+    width: 1.5rem;
+    height: 1.9rem;
+}
 
 /* End of Deck.js */
 
@@ -601,3 +618,162 @@ background-color: #d7d7d7d9;
 }
 
 /* End of EditCard.js */
+
+/* Start of media queries */
+
+@media (min-height: 933px) {
+    .Layout-index-container {
+        /*background-color: red;*/
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3.5rem;
+    }
+
+    .decks-row, .Deck-card-row {
+        /*gap: 5.45rem !important;*/
+        margin-bottom: 2rem !important;
+    }
+
+    .Layout-index-deck-col {
+        padding: 1.25rem 1.25rem 1rem 1.25rem !important;
+    }
+    .Create-deck-row {
+        /*padding-bottom: 50%;*/
+    }
+    .CreateDeck-create-deck-h1 {
+        /*margin-bottom: 1.5rem !important;*/
+    }
+    .Create-deck-form {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .end-footer {
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+    }
+    .Layout-main-row { 
+        min-height: 10vh !important;
+    }
+    .Deck-card-col {
+        /*width: 100%;*/
+        gap: 12rem !important;
+    }
+    .Deck-deck-edit-deck-btn {
+        padding: 0rem .69rem 0rem 0rem !important;
+        width: 6.7rem !important;
+    }
+    .Deck-deck-study-btn {
+        width: 6.67rem !important;
+        padding: .7rem 0.25rem .7rem 0 !important;
+    }
+    .Deck-deck-book-image {
+        width: 1.55rem !important;
+        height: 1.5rem !important;
+    }
+    .Deck-deck-add-cards-to-deck-btn {
+        padding: 0 .4rem 0 .2rem !important;
+        width: 7.1rem !important;
+      }
+    .Deck-deck-delete-deck-btn {
+        padding: 0 .6rem !important;
+        /*position: relative;
+        left: 67.77%;*/
+        margin-right: .89rem !important;
+        width: 3.4rem;
+    }
+    .Deck-deck-add-image {
+        width: 1.6rem !important;
+        height: 1.78rem !important;
+    }
+    .Deck-card-trashcan-image {
+        width: 1.85rem;
+        height: 1.8rem;
+    }
+    .Deck-deck-trashcan-image {
+        width: 2rem;
+        height: 1.9rem;
+    }
+    .Deck-card-delete-card-btn {
+        width: 3.2rem;
+        height: 2.5rem;
+    }
+    .Deck-card-edit-card-btn {
+        padding: .4rem .9rem .4rem .4rem !important;
+        width: 5rem !important;
+        gap: .2rem;
+    }
+    .Deck-card-edit-image {
+        width: 1.3rem;
+        height: 1.2rem;
+    }
+    .Deck-deck-row {
+
+    }
+    .Deck-deck-edit-image {
+        width: 1.45rem;
+        height: 1.54rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .Deck-deck-edit-deck-btn {
+        padding: 0rem .69rem 0rem 0rem !important;
+        width: 6.7rem !important;
+    }
+    .Deck-deck-study-btn {
+        width: 6.67rem !important;
+        padding: .7rem 0.25rem .7rem 0 !important;
+    }
+    .Deck-deck-book-image {
+        width: 1.55rem !important;
+        height: 1.5rem !important;
+    }
+    .Deck-deck-add-cards-to-deck-btn {
+        padding: 0 .4rem 0 .2rem !important;
+        width: 7.1rem !important;
+      }
+    .Deck-deck-delete-deck-btn {
+        padding: 0 .6rem !important;
+        /*position: relative;
+        left: 67.77%;*/
+        margin-right: .89rem !important;
+        width: 3.4rem;
+    }
+    .Deck-deck-add-image {
+        width: 1.6rem !important;
+        height: 1.78rem !important;
+    }
+    .Deck-card-trashcan-image {
+        width: 1.85rem;
+        height: 1.8rem;
+    }
+    .Deck-deck-trashcan-image {
+        width: 2rem;
+        height: 1.9rem;
+    }
+    .Deck-card-delete-card-btn {
+        width: 3.2rem;
+        height: 2.5rem;
+    }
+    .Deck-card-edit-card-btn {
+        padding: .4rem .9rem .4rem .4rem !important;
+        width: 5rem !important;
+        gap: .2rem;
+    }
+    .Deck-card-edit-image {
+        width: 1.3rem;
+        height: 1.2rem;
+    }
+    .Deck-deck-row {
+
+    }
+    .Deck-deck-edit-image {
+        width: 1.45rem;
+        height: 1.54rem;
+    }
+}
+
+/* end  of media queries */
