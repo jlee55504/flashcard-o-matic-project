@@ -85,7 +85,7 @@ function CreateDeck() {
             <Link to="/" className='home-link' >
               <Image src={ home } alt="home icon" className='home-icon'/>
             Home
-            </Link> / Create Deck
+            </Link> <span className='nav-bar-slash'>/</span> Create Deck
           </MDBCol>
         </MDBRow>
         <MDBRow className='CreateDeck-heading-form-row'>
@@ -95,7 +95,7 @@ function CreateDeck() {
               <label htmlFor='CreateDeck-name'>
                 Name
                 <input type='text' name="CreateDeck-name" id="CreateDeck-name" placeholder='Deck Name' 
-                onChange={ handleChange } value={ name } required />
+                onChange={ handleChange } value={ name } required minLength={50} />
               </label>
               <label htmlFor='CreateDeck-description'>
                 Description
