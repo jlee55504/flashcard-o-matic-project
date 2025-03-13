@@ -136,7 +136,7 @@ function Deck() {
               <Image src={ home } 
                 alt="home icon" className='home-icon' />
                   Home
-              </Link> / { deck.name }
+              </Link> <span className='nav-bar-slash'>/</span> { deck.name }
             </MDBCol>
           </MDBRow>
           <MDBRow className='Deck-deck-row'>
@@ -174,8 +174,8 @@ function Deck() {
             </MDBRow>
             <MDBRow className="Deck-card-row">    
               <h2>Cards</h2>
-              {deckCards ? deckCards.map(( card, index ) => (
-                <MDBCol className="Deck-card-col col-12 px-3 pt-3 pb-2 col-12" key={ index } >
+              {deckCards && deckCards.length ? deckCards.map(( card, index ) => (
+                <MDBCol className="Deck-card-col col-12 px-3 pt-3 pb-2" key={ index } >
                   <div className="Deck-card-div-front-div" >
                   <p className="Deck-card-div-front-p" >{ card.front }</p>
                   </div>
@@ -196,7 +196,7 @@ function Deck() {
                     </div>
                   </div>
                 </MDBCol>
-              )) : <></>}
+              )) : <MDBCol className='Deck-card-col-no-cards col-12 px-3 pt-3 pb-2'><h3>No cards</h3></MDBCol>}
           </MDBRow>
       </MDBRow>
       );
