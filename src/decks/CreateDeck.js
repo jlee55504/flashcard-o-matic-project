@@ -104,11 +104,14 @@ function CreateDeck() {
                   value={ description } required >
                 </textarea>
               </label>
-              <div><Button type='button' className='CreateDeck-cancel-btn' variant='secondary'
-                onClick={ () => navigate("/") }>Cancel
-              </Button>
-              <Button type='submit' className='CreateDeck-submit-btn' variant='primary' >Submit
-              </Button>
+              <div>
+                <Button type='button' className='CreateDeck-cancel-btn' variant='secondary'
+                  onClick={ () => navigate("/") }>
+                  Cancel
+                </Button>
+                <Button type='submit' className='CreateDeck-submit-btn' variant='primary' >
+                  Submit
+                </Button>
               </div>
             </form>
           </MDBCol>
