@@ -71,7 +71,7 @@ label {
     text-decoration: none;
     display: flex;
     align-items: center;
-    margin-right: .45rem;
+    /*margin-right: .4rem;*/
 }
 
 .home-icon {
@@ -84,13 +84,17 @@ label {
     background-color:#e2e2e2de;
     color:#575454d4;
     border-radius: 5px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     padding: 1rem;
     margin-bottom: 2rem;
     display: flex;
+    align-items: center;
+    text-align: center;
 }
 
-
+.nav-bar-slash {
+    margin: 0 .5rem
+}
 
 .Layout-index-add-image {
     width: 1.75rem;
@@ -341,14 +345,14 @@ label {
     padding: 0 .1rem;
 }
 
-.CreateDeck-create-deck-h1 {
+.CreateDeck-create-deck-h1, .EditDeck-edit-deck-h1 {
    margin-bottom: 1rem;
 }
 .CreateDeck-heading-form-row {
 
 }
 
-#CreateDeck-name, #CreateDeck-description {
+#CreateDeck-name, #CreateDeck-description, #EditDeck-deck-name, #EditDeck-deck-description {
     display: block;
     width: 100%;
     margin-top: .5rem;
@@ -356,7 +360,7 @@ label {
     border:rgb(118, 118, 118) 1px solid;
 }
 
-#CreateDeck-description {
+#CreateDeck-description, #EditDeck-deck-description {
     height: 11rem;
 }
 .CreateDeck-cancel-btn {
@@ -481,6 +485,16 @@ label {
     gap: 5rem;
 }
 
+.Deck-card-col-no-cards {
+    border: 1px solid white;
+    padding: 1.1rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    /*width: 100%;*/
+    gap: 5rem;
+}
+
 .Deck-card-div-btns-div {
     display: flex;
     gap: .5rem;
@@ -564,6 +578,10 @@ background-color: #d7d7d7d9;
 
 /* Start of EditDeck.js */
 
+.EditDeck-deck-link {
+    /*margin: 0 .4rem;*/
+}
+
 #EditDeck-deck-name, #EditDeck-deck-description {
     display: block;
     width: 100%;
@@ -625,28 +643,29 @@ background-color: #d7d7d7d9;
 /* Start of media queries */
 
 @media (min-height: 933px) {
+    .nav-bar {
+        font-size: 1.3rem;
+    }
     .Layout-index-container {
         min-height: 100%;
         display: flex;
         flex-direction: column;
         margin-bottom: 3.5rem;
     }
-
     .decks-row, .Deck-card-row {
         /*gap: 5.45rem !important;*/
         margin-bottom: 2rem !important;
     }
-
     .Layout-index-deck-col {
         padding: 1.25rem 1.25rem 1rem 1.25rem !important;
     }
     .CreateDeck-main-row, .EditDeck-main-row {
         /*padding-bottom: 50%;*/
     }
-    .CreateDeck-create-deck-h1 {
+    .CreateDeck-create-deck-h1, .EditDeck-edit-deck-h1 {
         /*margin-bottom: 1.5rem !important;*/
     }
-    .CreateDeck-form {
+    .CreateDeck-form, .EditDeck-edit-deck-form {
         display: flex;
         flex-direction: column;
         gap: 3rem;
@@ -659,7 +678,7 @@ background-color: #d7d7d7d9;
     .Layout-main-row { 
         min-height: 10vh !important;
     }
-    .Deck-card-col {
+    .Deck-card-col, .Deck-card-col-no-cards {
         /*width: 100%;*/
         gap: 12rem !important;
     }
@@ -721,6 +740,45 @@ background-color: #d7d7d7d9;
 }
 
 @media (min-width: 768px) {
+    .nav-bar {
+        font-size: 1.3rem;
+    }
+    .Layout-index-container {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3.5rem;
+    }
+    .decks-row, .Deck-card-row {
+        /*gap: 5.45rem !important;*/
+        margin-bottom: 2rem !important;
+    }
+    .Layout-index-deck-col {
+        padding: 1.25rem 1.25rem 1rem 1.25rem !important;
+    }
+    .CreateDeck-main-row, .EditDeck-main-row {
+        /*padding-bottom: 50%;*/
+    }
+    .CreateDeck-create-deck-h1, .EditDeck-edit-deck-h1 {
+        /*margin-bottom: 2rem !important;*/
+    }
+    .CreateDeck-form, .EditDeck-edit-deck-form {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .end-footer {
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+    }
+    .Layout-main-row { 
+        min-height: 10vh !important;
+    }
+    .Deck-card-col, .Deck-card-col-no-cards {
+        /*width: 100%;*/
+        gap: 12rem !important;
+    }
     .Deck-deck-edit-deck-btn {
         padding: 0rem .69rem 0rem 0rem !important;
         width: 6.7rem !important;
