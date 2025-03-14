@@ -84,8 +84,10 @@ function CreateDeck() {
           <MDBCol className='nav-bar col-12'>
             <Link to="/" className='home-link' >
               <Image src={ home } alt="home icon" className='home-icon'/>
-            Home
-            </Link> <span className='nav-bar-slash'>/</span> Create Deck
+              Home
+            </Link>
+            <span className='nav-bar-slash'>/</span> 
+              Create Deck
           </MDBCol>
         </MDBRow>
         <MDBRow className='CreateDeck-heading-form-row'>
