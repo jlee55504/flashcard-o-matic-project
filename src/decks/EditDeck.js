@@ -8,8 +8,11 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { readDeck, updateDeck } from '../utils/api/index';
 /* Imports the "classNames" from '../utils/class-names/index.js'. */
 import { classNames } from '../utils/class-names/index';
-import { Image, Button } from 'react-bootstrap';
+// Imports the image used in this 'component'
 import home from '../imgs/home.png';
+// Imports 'react-bootstrap' 'Elements'
+import { Image, Button } from 'react-bootstrap';
+import { MDBCol, MDBRow, MDBContainer } from 'mdb-react-ui-kit';
 
 /* The "EditDeck" 'function/component' displays the "nav-bar" 'div', (which 
 contains 'links' to the "Home page" ('src/Layout/index.js')) and "Deck.js" (which 
@@ -123,35 +126,52 @@ function EditDeck() {
     'button' JSX 'elements'. Both the 'text' and 'textarea' have the 
     "handleChange" 'function' for its 'onChange' 'attribute'. */
     return (
-      <div>
-        <div className='nav-bar'><Link to="/" className='home-link' >
-          <Image src={ home } 
-          alt="home" className='home-icon'/>
-            Home</Link> / <Link to={`/decks/${ deckId }`}>{ deck.name }</Link> / Edit Deck</div>
-        <h1>Edit Deck</h1>
-        <form onSubmit={ handleSubmit }>
-          <label htmlFor="EditDeck-deck-name" >
-            Name
-            <input type="text" id="EditDeck-deck-name" name="EditDeck-deck-name" 
-            placeholder={ deck.name } 
-            onChange={ handleChange } required value={ deckName } >
-            </input>
-          </label>
-          <label htmlFor="EditDeck-deck-description" >
-            Description
-            <textarea id="EditDeck-deck-description" name="EditDeck-deck-description"
-            placeholder={ deck.description } 
-            onChange={ handleChange } required value={ deckDescription } >
-            </textarea>
-            <Button type="button" variant="secondary" 
-            className="EditDeck-cancel-btn" onClick={ () => navigate(`/decks/${ deckId }`) } >
-              Cancel
-            </Button>
-            <Button type="submit" variant="primary" 
-            className="EditDeck-submit-btn" >Submit</Button>
-          </label>
-        </form>
-      </div>
+      <MDBRow className='mx-4 px-2 EditDeck-main-row'>
+        <MDBRow>
+          <MDBCol className='nav-bar col-12'>
+            <Link to="/" className='home-link'>
+              <Image src={ home } 
+                alt="home icon" className='home-icon'/>
+                Home
+            </Link>
+            <span className='nav-bar-slash'> /</span>
+            <Link className='EditDeck-deck-link' to={`/decks/${ deckId }`}>{ deck.name }</Link>
+            <span className='nav-bar-slash'>/</span>
+            <span> Edit Deck</span>
+          </MDBCol>
+        </MDBRow>
+        <MDBRow>
+          <MDBCol className='EditDeck-form-col col-12 pb-3'>
+            <h1 className='EditDeck-edit-deck-h1'>Edit Deck</h1>
+            <form className='EditDeck-edit-deck-form' onSubmit={ handleSubmit }>
+              <label htmlFor="EditDeck-deck-name">
+                Name
+                <input type="text" id="EditDeck-deck-name" name="EditDeck-deck-name" 
+                  placeholder={ deck.name } 
+                  onChange={ handleChange } required value={ deckName } minLength={50} >
+                </input>
+              </label>
+              <label htmlFor="EditDeck-deck-description">
+                Description
+                <textarea id="EditDeck-deck-description" name="EditDeck-deck-description"
+                  placeholder={ deck.description } 
+                  onChange={ handleChange } required value={ deckDescription } >
+                </textarea>
+              </label>
+              <div>
+                <Button type="button" variant="secondary" 
+                  className="EditDeck-cancel-btn" onClick={ () => navigate(`/decks/${ deckId }`) } >
+                  Cancel
+                </Button>
+                <Button type="submit" variant="primary" 
+                  className="EditDeck-submit-btn" >
+                  Submit
+                </Button>
+              </div>  
+            </form>
+          </MDBCol>
+        </MDBRow>
+      </MDBRow>
     );
   }
   
