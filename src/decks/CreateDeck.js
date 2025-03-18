@@ -84,7 +84,7 @@ function CreateDeck() {
           <MDBCol className='nav-bar col-12'>
             <Link to="/" className='home-link' >
               <Image src={ home } alt="home icon" className='home-icon'/>
-              Home
+                Home
             </Link>
             <span className='nav-bar-slash'>/</span> 
               Create Deck
@@ -106,10 +106,10 @@ function CreateDeck() {
                   value={ description } required >
                 </textarea>
               </label>
-              <div>
+              <div className='cancel-submit-btns-div'>
                 <Button type='button' className='CreateDeck-cancel-btn' variant='secondary'
                   onClick={ () => navigate("/") }>
-                  Cancel
+                    Cancel
                 </Button>
                 <Button type='submit' className='CreateDeck-submit-btn' variant='primary' >
                   Submit
