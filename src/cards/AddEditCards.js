@@ -6,8 +6,9 @@ import { useParams, useNavigate } from 'react-router-dom';
 /* Imports the "createCard", "updateCard", and the "readCard" 'functions/components'
 from '../utils/api/index.js'. */
 import { readCard, updateCard, createCard } from '../utils/api/index';
-
+// Imports 'react-bootstrap' 'Elements'
 import Button from 'react-bootstrap/Button';
+import { MDBCol, MDBRow, MDBContainer } from 'mdb-react-ui-kit';
 /* The "AddEditCards" 'function/component' handles returns a 'form JSX element' for 
 the "src/cards/AddCard.js" and "src/cards/EditCard.js" 'files/components' and handles 
 both of their functionality. */
@@ -127,29 +128,38 @@ function AddEditCards() {
   /* A 'form JSX element' is returned with 'attribute values' based on the 
   'value' of the "cardId" 'variable'. */
   return (
-    <form onSubmit={ handleSubmit }>
-      <label htmlFor={ cardId ? "EditCard-front-text" : 'AddCard-front-text' } className={ cardId ? 
-        'EditCard-front-text-label' : ""} >
-        Front
-        <textarea id={ cardId ? "EditCard-front-text" : "AddCard-front-text" } 
-          name={ cardId ? "EditCard-front-text" : "AddCard-front-text" }
-          placeholder={ cardId ? card.front : 'Front side of card' }
-          onChange={ handleChange } value={ frontCardText } required ></textarea>
-      </label>
-      <label htmlFor={ cardId ? "EditCard-back-text" : 'AddCard-back-text' } >
-        Back
-        <textarea id={ cardId ? "EditCard-back-text" : "AddCard-back-text" } 
-        name={ cardId ? "EditCard-back-text" : "AddCard-back-text" }
-        placeholder={ cardId ? card.front : 'Back side of card' } 
-        onChange={ handleChange } value={ backCardText } required />
-      </label>
-      <Button type="button" variant='secondary' className={ cardId ? "EditCard-cancel-btn" : 
-        'AddCard-done-btn' } onClick={ () => navigate(`/decks/${ deckId }`) } >Cancel</Button>
-      <Button type="submit" variant="primary" className={ cardId ? "EditCard-submit-btn btn btn-primary" : 
-        'AddCard-submit-btn' } >Submit</Button>
-    </form>
+    <MDBCol className='col-12 AddEditCards-form-col'>
+      <form className='AddEditCards-form' onSubmit={ handleSubmit }>
+        <label htmlFor={ cardId ? "EditCard-front-text" : 'AddCard-front-text' } className={ cardId ? 
+          'EditCard-front-text-label' : ""} >
+            Front
+          <textarea id={ cardId ? "EditCard-front-text" : "AddCard-front-text" } 
+            name={ cardId ? "EditCard-front-text" : "AddCard-front-text" }
+            placeholder={ cardId ? card.front : 'Front side of card' }
+            onChange={ handleChange } value={ frontCardText } required >
+          </textarea>
+        </label>
+        <label htmlFor={ cardId ? "EditCard-back-text" : 'AddCard-back-text' } >
+            Back
+          <textarea id={ cardId ? "EditCard-back-text" : "AddCard-back-text" } 
+            name={ cardId ? "EditCard-back-text" : "AddCard-back-text" }
+            placeholder={ cardId ? card.front : 'Back side of card' } 
+            onChange={ handleChange } value={ backCardText } required />
+        </label>
+        <div className='cancel-submit-btns-div'>
+          <Button type="button" variant='secondary' className={ cardId ? "EditCard-cancel-btn" : 
+            'AddCard-done-btn' } onClick={ () => navigate(`/decks/${ deckId }`) } >
+              Cancel
+          </Button>
+          <Button type="submit" variant="primary" className={ cardId ? "EditCard-submit-btn btn btn-primary" : 
+            'AddCard-submit-btn' } >
+              Submit
+          </Button>
+        </div>
+      </form>
+    </MDBCol>
   );
- }
+ };
 
 /* Exports the "AddEditCards" 'function/component'. */
 export default AddEditCards;
