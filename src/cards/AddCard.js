@@ -7,9 +7,12 @@ import { classNames } from '../utils/class-names/index';
 import { useParams, Link, Routes, Route } from 'react-router-dom';
 /* Imports the "readDeck" 'function/component' from '../utils/api/index.js'. */
 import { readDeck } from '../utils/api/index';
+// Imports all the images used in this 'component'
 import Image from 'react-bootstrap/Image';
 import home from '../imgs/home.png';
 import AddEditCards from './AddEditCards';
+// Imports 'react-bootstrap' 'Elements'
+import { MDBCol, MDBRow, MDBContainer } from 'mdb-react-ui-kit';
 /* The "AddCard" 'function/component' allows users to add a "card" to the 
 specific "deck" and 'local server'. */
 function AddCard() {
@@ -43,15 +46,27 @@ function AddCard() {
   "Add Card". A 'Routes' and 'Route' 'component' display the "AddEdditCards.js"
   'file/component' which handles the "AddCard.js" 'file's/component's functionality'. */
   return (
-    <div>
-      <div className='nav-bar'><Link to="/" className='home-link' >
-        <Image src={ home }
-        alt="home" className='home-icon'/>Home </Link> / <Link to={`/decks/${ deckId }`}> { deckName }</Link> / Add Card</div>
-      <h2 className='AddCard-deck-name-h2'> { deckName }: </h2><h2 className='AddCard-add-card-h2'> Add Card</h2>
+    <MDBRow className='mx-4 px-2 AddCard-main-row'>
+      <MDBRow>
+        <MDBCol className='nav-bar col-12'>
+          <Link to="/" className='home-link' >
+            <Image src={ home } alt="home" className='home-icon'/>
+            Home 
+          </Link>
+          <span className='nav-bar-slash'> /</span>
+          <span> Add Card</span>
+        </MDBCol>
+      </MDBRow>
+      <MDBRow>
+        <MDBCol className='col-12 AddCard-heading-col pb-3'>
+          <h1 className='AddCard-deck-name-h1'> { deckName }: </h1>
+          <h1 className='AddCard-add-card-h1'> Add Card</h1>
+        </MDBCol>
+      </MDBRow>
       <Routes>
-        <Route path="/new/*" element={<AddEditCards />} />
-      </Routes>
-    </div>
+          <Route path="/new/*" element={<AddEditCards />} />
+        </Routes>
+    </MDBRow>
   );
 }
 
