@@ -132,7 +132,7 @@ function EditDeck() {
             <Link to="/" className='home-link'>
               <Image src={ home } 
                 alt="home icon" className='home-icon'/>
-                Home
+                  Home
             </Link>
             <span className='nav-bar-slash'> /</span>
             <Link className='EditDeck-deck-link' to={`/decks/${ deckId }`}>{ deck.name }</Link>
@@ -141,7 +141,7 @@ function EditDeck() {
           </MDBCol>
         </MDBRow>
         <MDBRow>
-          <MDBCol className='EditDeck-form-col col-12 pb-3'>
+          <MDBCol className='EditDeck-form-col col-12'>
             <h1 className='EditDeck-edit-deck-h1'>Edit Deck</h1>
             <form className='EditDeck-edit-deck-form' onSubmit={ handleSubmit }>
               <label htmlFor="EditDeck-deck-name">
@@ -158,14 +158,14 @@ function EditDeck() {
                   onChange={ handleChange } required value={ deckDescription } >
                 </textarea>
               </label>
-              <div>
+              <div className='cancel-submit-btns-div'>
                 <Button type="button" variant="secondary" 
                   className="EditDeck-cancel-btn" onClick={ () => navigate(`/decks/${ deckId }`) } >
-                  Cancel
+                    Cancel
                 </Button>
                 <Button type="submit" variant="primary" 
                   className="EditDeck-submit-btn" >
-                  Submit
+                    Submit
                 </Button>
               </div>  
             </form>
