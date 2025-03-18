@@ -31,6 +31,9 @@
  
 }
 
+.cancel-submit-btns-div {
+    margin-top: 2rem;
+}
 
 .btn-primary {
     color: #fff;
@@ -93,7 +96,7 @@ label {
 }
 
 .nav-bar-slash {
-    margin: 0 .5rem
+    margin: 0 .45rem 0 .5rem;
 }
 
 .Layout-index-add-image {
@@ -352,7 +355,9 @@ label {
 
 }
 
-#CreateDeck-name, #CreateDeck-description, #EditDeck-deck-name, #EditDeck-deck-description {
+#CreateDeck-name, #CreateDeck-description, #EditDeck-deck-name, #EditDeck-deck-description, 
+#EditCard-front-text, #AddCard-front-tex, #EditCard-front-text, #AddCard-front-text, 
+#EditCard-back-text, #AddCard-back-text {
     display: block;
     width: 100%;
     margin-top: .5rem;
@@ -380,13 +385,24 @@ label {
 
 /* Start of AddCard.js */
 
-.AddCard-add-card-h2, .AddCard-deck-name-h2 {
+.AddCard-main-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.AddCard-heading-col {
+    padding: 0;
+    margin-bottom: 1rem; 
+}
+
+.AddCard-add-card-h1, .AddCard-deck-name-h1 {
     display: inline;
 }
 
 #AddCard-front-text, #AddCard-back-text {
     display: block;
     width: 100%;
+    height: 11rem;
 }
 .AddCard-done-btn {
     margin-right: .5rem;
@@ -398,6 +414,14 @@ label {
 
 /* End of AddCard.js */
 
+/* Start of AddEditCards.js */
+
+.AddEditCards-form-col {
+    margin-bottom: 2rem;
+    padding: 0 1.129rem;
+}
+
+/* End of AddEditCards.js*/
 
 /* Start of Study.js */
 
@@ -578,6 +602,10 @@ background-color: #d7d7d7d9;
 
 /* Start of EditDeck.js */
 
+.EditDeck-form-col {
+    padding: 0;
+}
+
 .EditDeck-deck-link {
     /*margin: 0 .4rem;*/
 }
@@ -605,6 +633,17 @@ background-color: #d7d7d7d9;
 
 /* Start of EditCard.js */
 
+.EditCard-heading-col {
+    padding: 0 .1rem;
+}
+.EditCard-main-row {
+    flex-direction: column;
+} 
+
+.EditCard-h1 {
+    margin-bottom: 1rem;
+}
+
 .EditCard-cancel-btn {
     margin-right: .5rem;
 }
@@ -622,6 +661,7 @@ background-color: #d7d7d7d9;
     padding-left: 1rem;
     padding-top: .5rem;
     padding-bottom: .5rem;
+    height: 11rem !important;
 }
 
 #EditCard-front-text {
@@ -659,13 +699,13 @@ background-color: #d7d7d7d9;
     .Layout-index-deck-col {
         padding: 1.25rem 1.25rem 1rem 1.25rem !important;
     }
-    .CreateDeck-main-row, .EditDeck-main-row {
+    .CreateDeck-main-row, .EditDeck-main-row, .AddCard-main-row, .EditCard-main-row {
         /*padding-bottom: 50%;*/
     }
-    .CreateDeck-create-deck-h1, .EditDeck-edit-deck-h1 {
+    .CreateDeck-create-deck-h1, .EditDeck-edit-deck-h1, .AddCard-deck-name-h1, .AddCard-add-card-h1 {
         /*margin-bottom: 1.5rem !important;*/
     }
-    .CreateDeck-form, .EditDeck-edit-deck-form {
+    .CreateDeck-form, .EditDeck-edit-deck-form, .AddEditCards-form {
         display: flex;
         flex-direction: column;
         gap: 3rem;
@@ -736,6 +776,9 @@ background-color: #d7d7d7d9;
     .Deck-deck-edit-image {
         width: 1.45rem;
         height: 1.54rem;
+    }
+    .cancel-submit-btns-div {
+        margin-top: 0;
     }
 }
 
@@ -756,13 +799,13 @@ background-color: #d7d7d7d9;
     .Layout-index-deck-col {
         padding: 1.25rem 1.25rem 1rem 1.25rem !important;
     }
-    .CreateDeck-main-row, .EditDeck-main-row {
+    .CreateDeck-main-row, .EditDeck-main-row, .AddCard-main-row, .EditCard-main-row {
         /*padding-bottom: 50%;*/
     }
-    .CreateDeck-create-deck-h1, .EditDeck-edit-deck-h1 {
+    .CreateDeck-create-deck-h1, .EditDeck-edit-deck-h1, .AddCard-deck-name-h1, .AddCard-add-card-h1 {
         /*margin-bottom: 2rem !important;*/
     }
-    .CreateDeck-form, .EditDeck-edit-deck-form {
+    .CreateDeck-form, .EditDeck-edit-deck-form, .AddEditCards-form {
         display: flex;
         flex-direction: column;
         gap: 3rem;
@@ -833,6 +876,9 @@ background-color: #d7d7d7d9;
     .Deck-deck-edit-image {
         width: 1.45rem;
         height: 1.54rem;
+    }
+    .cancel-submit-btns-div {
+        margin-top: 0;
     }
 }
 
