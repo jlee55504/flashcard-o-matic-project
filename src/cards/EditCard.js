@@ -7,9 +7,12 @@ import { useParams, Link, Routes, Route } from 'react-router-dom';
 import { readDeck } from '../utils/api/index';
 /* Imports the "classNames" from '../utils/class-names/index.js'. */
 import { classNames } from '../utils/class-names/index';
-import { Image } from 'react-bootstrap';
+// Imports all the images used in this 'component'
 import AddEditCards from './AddEditCards';
 import home from '../imgs/home.png';
+// Imports 'react-bootstrap' 'Elements'
+import { Image } from 'react-bootstrap';
+import { MDBCol, MDBRow, MDBContainer } from 'mdb-react-ui-kit';
 
 /* The "EditCard" 'function/component' displays the "nav-bar" 'div'. which 
 (contains a 'links' to the "Home page" ('src/Layout/index.js')) and "Deck.js" 
@@ -61,16 +64,30 @@ function EditCard() {
     "AddEdditCards.js" 'file/component' which handles the "EditCard.js" 'file's/component's 
     functionality'. */
     return (
-      <div>   
-        <div className='nav-bar'><Link to="/" className='home-link' >
-        <Image src={ home }
-        alt="home" className='home-icon'/>
-        Home</Link> / <Link to={`/decks/${ deckId }`}>Deck { deck.name }</Link> / Edit Card { cardId }</div>
-        <h1>Edit Card</h1>
+      <MDBRow className='mx-4 px-2 EditCard-main-row'>
+        <MDBRow>
+          <MDBCol className='nav-bar col-12'>
+            <Link to="/" className='home-link' >
+              <Image src={ home } alt="home" className='home-icon' />
+              Home
+            </Link>
+            <span className='nav-bar-slash'> /</span>
+            <Link to={`/decks/${ deckId }`}>
+              Deck { deck.name }
+             </Link>
+             <span className='nav-bar-slash'> /</span>
+             <span> Edit Card { cardId }</span>
+          </MDBCol>  
+        </MDBRow>   
+        <MDBRow>
+          <MDBCol className='EditCard-heading-col col-12'>
+            <h1 className='EditCard-h1'>Edit Card</h1>
+          </MDBCol>
+        </MDBRow>
         <Routes>
           <Route path="/edit/*" element={<AddEditCards />} />
         </Routes>
-      </div>
+      </MDBRow>
       );
   }
   
