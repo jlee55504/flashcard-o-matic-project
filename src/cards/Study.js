@@ -325,7 +325,7 @@ function Study() {
           <MDBCol className='nav-bar col-12'>
             <Link to="/" className='home-link' >
               <Image src={ home } 
-                className='home-icon' alt="home" />
+                className='home icon' alt="home" />
                   Home
             </Link> 
             <span className='nav-bar-slash'> /</span>
@@ -354,7 +354,7 @@ function Study() {
                     <Button className='Study-add-cards-to-deck' variant='primary'
                       onClick={ () => navigate(`/decks/${ deckId }/cards/new`) } > 
                       <Image src={ add } 
-                        alt="plus-math" className='Study-add-cards-image'/>
+                        alt="plus-math icon" className='Study-add-cards-image'/>
                         Add Cards
                     </Button>
                   </div>  
