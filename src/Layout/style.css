@@ -425,6 +425,11 @@ label {
 
 /* Start of Study.js */
 
+.Study-add-cards-image {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 .Study-btns-div {
     margin-top: 2rem;
     display: flex;
@@ -456,7 +461,11 @@ label {
 }
 
 .Study-add-cards-to-deck {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .3rem;
+    width: 7rem;
 }
 
 .Study-cards-row {
