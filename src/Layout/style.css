@@ -418,24 +418,51 @@ label {
 
 .AddEditCards-form-col {
     margin-bottom: 2rem;
-    padding: 0 1.129rem;
+    padding: 0 .843rem;
 }
 
 /* End of AddEditCards.js*/
 
 /* Start of Study.js */
 
-.Study-flip-btn {
-  margin-right: .5rem;
-  padding: .4rem .8rem;
+.Study-btns-div {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
 }
 
+.Study-main-row {
+    flex-direction: column;
+    margin-bottom: 5.5rem;
+}
+
+.Study-main-col-h1 {
+    margin-bottom: 2rem;
+}
+
+.Study-main-col {
+    padding: 0 .1rem 0 .1rem;
+    flex-direction: column;
+}
+
+.Study-flip-btn {
+  padding: .4rem .8rem;
+}
+.Study-next-btn, .Study-flip-btn {
+    width: 3.7rem;
+}
 .Study-next-btn {
   padding: .4rem .75rem;
 }
 
 .Study-add-cards-to-deck {
 
+}
+
+.Study-cards-row {
+    flex-direction: column;
+    /*width: 100%;*/
+    margin-bottom: 2rem;
 }
 
 /* End of Study.js */
@@ -780,6 +807,18 @@ background-color: #d7d7d7d9;
     .cancel-submit-btns-div {
         margin-top: 0;
     }
+    .Study-main-row {
+
+    }
+    .Study-flip-btn, .Study-next-btn {
+        width: 5rem;
+    }
+    .card-body {
+        padding: 2rem;
+    }
+    .Study-btns-div {
+        gap: 1.5rem;
+    }
 }
 
 @media (min-width: 768px) {
@@ -879,6 +918,18 @@ background-color: #d7d7d7d9;
     }
     .cancel-submit-btns-div {
         margin-top: 0;
+    }
+    .Study-main-row {
+
+    }
+    .Study-flip-btn, .Study-next-btn {
+        width: 5rem;
+    }
+    .card-body {
+        padding: 2rem;
+    }
+    .Study-btns-div {
+        gap: 1.5rem;
     }
 }
 
