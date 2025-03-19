@@ -7,9 +7,12 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { readDeck } from '../utils/api/index';
 /* Imports the "classNames" from '../utils/class-names/index.js'. */
 import { classNames } from '../utils/class-names/index';
-import { Button, Card, Image } from 'react-bootstrap';
+// Imports all the images used in this 'component'
 import home from '../imgs/home.png';
 import add from '../imgs/add.png';
+// Imports 'react-bootstrap' 'Elements'
+import { Button, Card, Image } from 'react-bootstrap';
+import { MDBCol, MDBRow, MDBContainer } from 'mdb-react-ui-kit';
 
 /* The "Study" 'function/component' displays the "nav-bar" 'div' which (contains
 a 'links' to the "Home page" ('src/Layout/index.js')) and "Deck.js" (which 
@@ -263,7 +266,7 @@ function Study() {
     'button'. */
     if ( isCardFlipped === true ) {
       buttonsToDisplay = 
-      <div>
+      <div className='Study-btns-div'>
         <Button className='Study-flip-btn' variant='secondary' 
           onClick={ () => {
               handleCardFlip( true )
@@ -317,30 +320,49 @@ function Study() {
     'variable', plus "/cards/new". This will take users load the "AddCards.js" 'file' for 
     the specific "deck". */
     return (
-      <div>
-        <div className='nav-bar'><Link to="/" className='home-link' >
-          <Image src={ home } 
-          className='home-icon' alt="home"/>
-            Home</Link> / <Link to={`/decks/${ deckId }`}>{ deckName }</Link> / Study</div>
-        <h1>Study: { deckName }</h1>
-        { deckCards.length >= 3 ?
-        <Card>
-          <Card.Body>
-            <Card.Title>Card { currentCardNumber } of { deckCards.length }</Card.Title>
-            <Card.Text> { currentCardText } </Card.Text>
-            { buttonsToDisplay }
-          </Card.Body>
-          </Card> : 
-          <div>
-            <h2>Not enough cards.</h2>
-            <p>You need at least 3 cards to study. There are { deckCards.length } in this deck.</p>
-            <Button className='Study-add-cards-to-deck' variant='primary'
-              onClick={ () => navigate(`/decks/${ deckId }/cards/new`) } > 
-              <Image src={ add } 
-              alt="plus-math"/>Add Cards</Button>
-          </div>
-        }
-      </div>
+      <MDBRow className='mx-4 px-2 Study-main-row'>
+        <MDBRow className='nav-bar-row'>
+          <MDBCol className='nav-bar col-12'>
+            <Link to="/" className='home-link' >
+              <Image src={ home } 
+                className='home-icon' alt="home" />
+                  Home
+            </Link> 
+            <span className='nav-bar-slash'> /</span>
+            <Link to={`/decks/${ deckId }`}>{ deckName }</Link>
+            <span className='nav-bar-slash'> /</span>
+            <div>
+              Study
+            </div>
+          </MDBCol>
+        </MDBRow>
+        <MDBRow className='Study-cards-row'>
+          <MDBCol className='Study-main-col col-12'>
+            <h1 className='Study-main-col-h1'>Study: { deckName }</h1>
+            { deckCards.length >= 3 ?
+              <Card>
+                <Card.Body>
+                  <Card.Title>Card { currentCardNumber } of { deckCards.length }</Card.Title>
+                  <Card.Text> { currentCardText } </Card.Text>
+                  { buttonsToDisplay }
+                </Card.Body>
+              </Card> : 
+                <MDBCol className='Study-main-col col-12'>
+                  <h2>Not enough cards.</h2>
+                  <p>You need at least 3 cards to study. There are { deckCards.length } in this deck.</p>
+                  <div className='Study-btns-div'>
+                    <Button className='Study-add-cards-to-deck' variant='primary'
+                      onClick={ () => navigate(`/decks/${ deckId }/cards/new`) } > 
+                      <Image src={ add } 
+                        alt="plus-math"/>Add Cards
+                    </Button>
+                  </div>
+                  
+                </MDBCol>
+            }
+          </MDBCol>
+        </MDBRow>
+      </MDBRow>
     );
   }
   
