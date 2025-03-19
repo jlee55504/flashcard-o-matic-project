@@ -298,27 +298,6 @@ function Study() {
         }>Flip</Button>
       }
   
-    /* A 'div' JSX 'element' is 'returned' with the "nav-bar" 'div' inside which 
-    contains a 'Link' JSX 'component' (which brings users to the "Home page") with
-    an 'img' JSX 'element' inside with the 'text' "Home" followed by the text 
-    " / ", a 'Link' JSX 'element' to the  the 'link' to the "Deck.js" 
-    'file' that displays the current "deck", and the 'text' " / Study", an 'h1' 
-    JSX 'element' with the 'text' "Study:" and the 'value' of the "deckName" 
-    'variable'. A 'ternary operator' checks if the "deckCards" 'length' is equal 
-    to or greater than the number '3' (there are more than three 'cards/objects').
-    If so, a 'div' JSX 'element' is 'returned' with an 'h3' JSX 'element' with 
-    the 'text' "Card " plus the 'value' of the "currentCardNumber", the 'text' 
-    " of ", and the 'value' of the "deckCard" 'variable's' 'length' (the total 
-    number of "cards/objects"), followed py a 'p' JSX 'element' with the 'value' 
-    of the "currentCardText" 'variable' followed by the 'value' of the "buttonsToDisplay" 
-    'variable'. Otherwise, a 'div' JSX 'element' is 'returned' with an 'h2' JSX 'element' 
-    with the 'text' "Not enough cards." followed by a 'p' JSX 'element' with the 'text' 
-    "You need at least 3 cards to study. There are ", plus the "deckCards" 'variable's' 
-    'length' plus the 'text' " in this deck.", followed by a 'button' JSX 'element' 
-    with an 'img' JSX 'element' inside and an 'onClick' 'attribute' with the the 
-    "navigate" 'variable' with 'text' "/decks", plus the 'value' of the "deckId" 
-    'variable', plus "/cards/new". This will take users load the "AddCards.js" 'file' for 
-    the specific "deck". */
     return (
       <MDBRow className='mx-4 px-2 Study-main-row'>
         <MDBRow className='nav-bar-row'>
@@ -354,7 +333,7 @@ function Study() {
                     <Button className='Study-add-cards-to-deck' variant='primary'
                       onClick={ () => navigate(`/decks/${ deckId }/cards/new`) } > 
                       <Image src={ add } 
-                        alt="plus-math icon" className='Study-add-cards-image'/>
+                        alt="plus-math icon" className='Study-add-cards-image' />
                         Add Cards
                     </Button>
                   </div>  
