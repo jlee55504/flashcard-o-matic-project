@@ -354,10 +354,10 @@ function Study() {
                     <Button className='Study-add-cards-to-deck' variant='primary'
                       onClick={ () => navigate(`/decks/${ deckId }/cards/new`) } > 
                       <Image src={ add } 
-                        alt="plus-math"/>Add Cards
+                        alt="plus-math" className='Study-add-cards-image'/>
+                        Add Cards
                     </Button>
-                  </div>
-                  
+                  </div>  
                 </MDBCol>
             }
           </MDBCol>
