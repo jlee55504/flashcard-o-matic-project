@@ -511,10 +511,10 @@ label {
 }
 
 .Deck-deck-delete-deck-btn {
-  padding: 0 .6rem;
+  padding: 0 .6rem 0 .53rem;
   /*position: relative;
   left: 67.77%;*/
-  margin-right: 1rem;
+  margin-right: 1.1rem;
   width: 3rem;
   height: 3rem;
 }
@@ -527,12 +527,12 @@ label {
 }
 
 .Deck-deck-edit-deck-btn {
-    padding: 0rem .69rem 0rem .295rem;
+    padding: 0rem .67rem 0rem .295rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 4.2812rem;
-    gap: .154rem;
+    width: 4.469rem;
+    gap: .115rem;
 }
 
 .Deck-card-col {
@@ -557,7 +557,7 @@ label {
 
 .Deck-card-div-btns-div {
     display: flex;
-    gap: .5rem;
+    gap: .75rem;
 }
 .Deck-card-div-front-div {
     width: 50%;
@@ -597,18 +597,18 @@ background-color: #d7d7d7d9;
 }
 
 .Deck-card-edit-card-btn {
-  padding: .4rem .7rem .4rem .4rem;
+  padding: .4rem .67rem .4rem .4rem;
   width: 4rem;
   gap: .165rem;
 }
 .Deck-deck-study-btn {
-    width: 4.3rem;
+    width: 4.45rem;
     padding: .7rem 0.33rem .7rem 0.1rem;
     gap: .09rem;
 }
 .Deck-deck-add-cards-to-deck-btn {
   padding: 0 .29rem 0 .08rem;
-  width: 4.56rem;
+  width: 4.614rem;
 }
 
  .Deck-deck-add-cards-to-deck-btn, .Deck-edit-deck-btn, .Deck-deck-study-btn, .Deck-deck-delete-deck-btn, .Deck-card-edit-card-btn, .Deck-card-delete-card-btn {
@@ -618,7 +618,7 @@ background-color: #d7d7d7d9;
  }
 
  .Deck-deck-edit-image {
-    width: 1.3rem;
+    width: 1.4rem;
     height: 1.46rem;
  }
 
@@ -759,12 +759,12 @@ background-color: #d7d7d7d9;
         gap: 12rem !important;
     }
     .Deck-deck-edit-deck-btn {
-        padding: 0rem .69rem 0rem 0rem !important;
-        width: 6.7rem !important;
+        padding: 0rem .7rem 0rem 0rem !important;
+        width: 6.8rem !important;
     }
     .Deck-deck-study-btn {
-        width: 6.67rem !important;
-        padding: .7rem 0.25rem .7rem 0 !important;
+        width: 6.8rem !important;
+        padding: .7rem 0.2rem .7rem 0 !important;
     }
     .Deck-deck-book-image {
         width: 1.55rem !important;
@@ -778,7 +778,7 @@ background-color: #d7d7d7d9;
         padding: 0 .6rem !important;
         /*position: relative;
         left: 67.77%;*/
-        margin-right: .89rem !important;
+        margin-right: 1.001rem !important;
         width: 3.4rem;
     }
     .Deck-deck-add-image {
@@ -798,13 +798,14 @@ background-color: #d7d7d7d9;
         height: 2.5rem;
     }
     .Deck-card-edit-card-btn {
-        padding: .4rem .9rem .4rem .4rem !important;
+        padding: .4rem .9rem .4rem .5rem !important;
         width: 5rem !important;
         gap: .2rem;
     }
     .Deck-card-edit-image {
-        width: 1.3rem;
-        height: 1.2rem;
+        width: 1.28rem;
+        height: 1.53rem;
+        margin-right: .03515rem;
     }
     .Deck-deck-row {
 
@@ -826,6 +827,12 @@ background-color: #d7d7d7d9;
         padding: 2rem;
     }
     .Study-btns-div {
+        gap: 1.5rem;
+    }
+    .first-deck-btns-div {
+        gap: 1.5rem;
+    }
+    .Deck-card-div-btns-div {
         gap: 1.5rem;
     }
 }
@@ -871,12 +878,12 @@ background-color: #d7d7d7d9;
         gap: 12rem !important;
     }
     .Deck-deck-edit-deck-btn {
-        padding: 0rem .69rem 0rem 0rem !important;
-        width: 6.7rem !important;
+        padding: 0rem .7rem 0rem 0rem !important;
+        width: 6.8rem !important;
     }
     .Deck-deck-study-btn {
-        width: 6.67rem !important;
-        padding: .7rem 0.25rem .7rem 0 !important;
+        width: 6.8rem !important;
+        padding: .7rem 0.2rem .7rem 0 !important;
     }
     .Deck-deck-book-image {
         width: 1.55rem !important;
@@ -890,7 +897,7 @@ background-color: #d7d7d7d9;
         padding: 0 .6rem !important;
         /*position: relative;
         left: 67.77%;*/
-        margin-right: .89rem !important;
+        margin-right: 1.001rem !important;
         width: 3.4rem;
     }
     .Deck-deck-add-image {
@@ -910,13 +917,14 @@ background-color: #d7d7d7d9;
         height: 2.5rem;
     }
     .Deck-card-edit-card-btn {
-        padding: .4rem .9rem .4rem .4rem !important;
+        padding: .4rem .9rem .4rem .5rem !important;
         width: 5rem !important;
         gap: .2rem;
     }
     .Deck-card-edit-image {
-        width: 1.3rem;
-        height: 1.2rem;
+        width: 1.28rem;
+        height: 1.53rem;
+        margin-right: .03515rem;
     }
     .Deck-deck-row {
 
@@ -938,6 +946,9 @@ background-color: #d7d7d7d9;
         padding: 2rem;
     }
     .Study-btns-div {
+        gap: 1.5rem;
+    }
+    .Deck-card-div-btns-div {
         gap: 1.5rem;
     }
 }
