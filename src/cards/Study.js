@@ -304,7 +304,7 @@ function Study() {
           <MDBCol className='nav-bar col-12'>
             <Link to="/" className='home-link' >
               <Image src={ home } 
-                className='home icon' alt="home" />
+                className='home-icon' alt="home icon" />
                   Home
             </Link> 
             <span className='nav-bar-slash'> /</span>

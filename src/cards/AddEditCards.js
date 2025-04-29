@@ -109,6 +109,7 @@ function AddEditCards() {
         else if ( target.name === "AddCard-back-text" ) setBackCardText( target.value );
       }
   }
+  
   /* The "handleSubmit" 'function' takes a 'parameter' named "event". The 
   'method' 'preventDefault' is 'called' with the "event" 'parameter'. Then, 
   the "cardId" 'variable's' is checked for a 'truthy value'.If so, the 

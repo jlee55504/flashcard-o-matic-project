@@ -64,8 +64,8 @@ label {
 }
 
 .Layout-index-eye-image {
-    width: 1.5rem;
-    height: 2.1rem;
+    width: 1.55rem;
+    height: 2.2rem;
     font-weight: bold;
     margin-right: .25rem;
 }
@@ -79,7 +79,7 @@ label {
 
 .home-icon {
     width: 1.5rem;
-    height: 1.6rem;
+    height: 1.5rem;
     margin-right: .4rem;
 }
 
@@ -159,8 +159,9 @@ label {
 .Layout-index-create-deck-btn {
     display: flex;
     align-items: center;
-    gap: 5px;
-    padding-left: .344rem;
+    gap: .31rem;
+    width: 8.5rem;
+    padding: .37rem .65rem .37rem .346rem;
     /*margin-top: .5rem;
     margin-bottom: 1%;*/
 }
@@ -183,8 +184,8 @@ label {
  /*margin-right: 1%;*/ 
  background-color: #6c757d;
  color: #fff;
- border:1px solid #6c757d;
- padding: .01rem 3.009rem .01rem 2.5855rem;
+ border: 1px solid #6c757d;
+ padding: .01rem 3.009rem .01rem 2.8rem;
  border-radius: 6px;
  text-decoration: none; 
  align-items: center;

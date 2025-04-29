@@ -130,8 +130,8 @@ function Layout() {
   if ( location.pathname === "/" ) {
     createDeckBtn = <Button type="button" variant="secondary" className="Layout-index-create-deck-btn" 
     onClick={ () => navigate("/decks/new") } >
-      <Image src={ add } className="add-img"
-      alt="plus math icon" />
+      <Image src={ add } className="Layout-index-add-image"
+      alt="plus-math icon" />
         Create Deck</Button>
     decks = decksList.map( ( deck, index ) => (
       <MDBCol className="Layout-index-deck-col col-12 px-3 pt-3 pb-2" key={ index } >
@@ -144,19 +144,19 @@ function Layout() {
           <div className="first-index-btns-div">
           <Button variant="secondary" type="button" className="Layout-index-view-deck-btn" 
           onClick={ () => navigate(`/decks/${deck.id}`) } >
-            <Image src={ eye } className="eye-img" 
-            alt="imgage of eye icon" />
+            <Image src={ eye } className="Layout-index-eye-image" 
+            alt="image of eye icon" />
               View</Button>    
           <Button variant="primary" type="button" className="Layout-index-study-deck-btn" 
           onClick={ () => navigate(`/decks/${deck.id}/study`) } >
             <Image src={ book }
-            className="book-img" alt="bookmark icon" />
+            className="Layout-index-book-image" alt="bookmark icon" />
             Study</Button>
             </div> 
           <Button type="button" variant="danger" className="Layout-index-delete-deck-btn" value={ index } 
           onClick={ () => handleDeleteDeck( deck.id ) }>
             <Image src={ trashcan }
-            className="trashcan-img" alt="trashcan icon" />
+            className="Layout-index-trashcan-image" alt="trashcan icon" />
           </Button>     
         </div>
       </MDBCol>
@@ -173,7 +173,7 @@ function Layout() {
         {/* TODO: Implement the screen starting here */}
         <MDBRow className="Layout-main-row">
           {location.pathname === "/" ? <>
-          <MDBRow className="ml-3 create-deck-btn-row">{ createDeckBtn }</MDBRow>
+          <MDBRow className="ml-3 mr-0 create-deck-btn-row">{ createDeckBtn }</MDBRow>
           <MDBRow className="mx-3 decks-row">{ decks }</MDBRow>
           </> : <></>}
         <Routes>
